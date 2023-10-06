@@ -15,7 +15,7 @@ public class DictionaryController {
 
     @FXML
     public void study(ActionEvent actionEvent) throws Exception {
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("Study.fxml"));
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("Translate.fxml"));
         mainContent.getChildren().setAll(pane);
     }
 }
