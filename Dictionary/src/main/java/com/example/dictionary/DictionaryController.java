@@ -5,7 +5,7 @@ import javafx.scene.control.Label;
 
 public class DictionaryController {
     @FXML
-    private Label welcomeText;
+    private Label welcomeText;a
 
     @FXML
     protected void onHelloButtonClick() {
