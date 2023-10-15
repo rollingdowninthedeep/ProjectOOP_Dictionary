@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<<<<<<< Updated upstream
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
@@ -14,3 +15,44 @@
   <Label fx:id="welcomeText"/>
   <Button text="Hello!" onAction="#onHelloButtonClick"/>
 </VBox>
+=======
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="mainContent" fx:id="mainContent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.DictionaryController">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <children>
+      <VBox id="mainVBox" fx:id="mainVBox" alignment="TOP_CENTER" layoutX="306.0" layoutY="263.0" prefHeight="249.0" prefWidth="189.0" spacing="20.0" AnchorPane.topAnchor="263.0">
+         <children>
+            <Button id="studyButton" fx:id="studyButton" mnemonicParsing="false" onAction="#study" prefHeight="50.0" prefWidth="90.0" text="Study">
+               <font>
+                  <Font size="13.0" />
+               </font></Button>
+            <Button id="playButton" fx:id="playButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="90.0" text="Play Games">
+               <font>
+                  <Font size="13.0" />
+               </font></Button>
+            <Button id="contactButton" fx:id="contactButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="90.0" text="Contact Us" />
+            <Button id="exitButton" fx:id="exitButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="90.0" text="Exit" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+      <Label id="mainText" fx:id="mainText" layoutX="299.0" layoutY="186.0" text="What do you want to do?" textAlignment="CENTER">
+         <font>
+            <Font name="Bauhaus 93" size="18.0" />
+         </font></Label>
+      <Label id="mainTitle" fx:id="mainTitle" layoutX="338.0" layoutY="64.0" text="TITLE">
+         <font>
+            <Font name="Forte" size="48.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
+>>>>>>> Stashed changes
