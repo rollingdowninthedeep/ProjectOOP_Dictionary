@@ -1,4 +1,4 @@
 package com.example.dictionary;
 
-public class Study {
+public class Translate {
 }
