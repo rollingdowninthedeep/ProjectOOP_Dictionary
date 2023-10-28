@@ -10,6 +10,8 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class DictionaryController {
+    public static DatabaseConnection databaseConnection = new DatabaseConnection();
+
     @FXML
     private AnchorPane mainContent;
 
