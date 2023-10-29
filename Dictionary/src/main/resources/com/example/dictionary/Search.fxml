@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.ScrollBar?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="511.0" prefWidth="821.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="478.0" prefWidth="590.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.Search">
    <children>
-      <ListView id="searchListView" fx:id="searchListView" layoutX="14.0" layoutY="54.0" prefHeight="441.0" prefWidth="210.0" />
-      <ScrollBar id="searchScrollBar" fx:id="searchScrollBar" layoutX="205.0" layoutY="54.0" opacity="0.75" orientation="VERTICAL" prefHeight="442.0" prefWidth="18.0" />
-      <TextField id="searchTextField" fx:id="searchTextField" layoutX="14.0" layoutY="12.0" prefHeight="31.0" prefWidth="210.0" promptText="Search..." />
+      <ListView id="searchListView" fx:id="searchListView" editable="true" fixedCellSize="5.0" layoutX="14.0" layoutY="54.0" prefHeight="417.0" prefWidth="210.0" />
+      <ScrollBar id="searchScrollBar" fx:id="searchScrollBar" layoutX="206.0" layoutY="53.0" opacity="0.75" orientation="VERTICAL" prefHeight="417.0" prefWidth="18.0" />
+      <TextField id="searchTextField" fx:id="searchTextField" layoutX="14.0" layoutY="12.0" onKeyPressed="#searchFieldAction" prefHeight="31.0" prefWidth="210.0" promptText="Search anything you want..." />
+      <AnchorPane id="contentArea" fx:id="contentArea" layoutX="224.0" layoutY="53.0" prefHeight="417.0" prefWidth="366.0">
+         <children>
+            <Label fx:id="titleLabel" prefHeight="37.0" prefWidth="366.0" />
+            <Label fx:id="contentLabel" layoutY="37.0" prefHeight="379.0" prefWidth="366.0" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

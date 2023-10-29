@@ -2,16 +2,15 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.StackPane?>
 
 <AnchorPane fx:id="scene" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.Study">
 <children>
-   <StackPane id="contentArea" fx:id="contentArea" layoutX="178.0" layoutY="108.0" prefHeight="478.0" prefWidth="590.0" />
       <AnchorPane id="buttonArea" fx:id="buttonArea" layoutX="14.0" layoutY="108.0" prefHeight="478.0" prefWidth="164.0">
          <children>
             <Button id="translateButton" fx:id="translateButton" layoutX="33.0" layoutY="34.0" mnemonicParsing="false" onAction="#translate" prefHeight="67.0" prefWidth="98.0" text="Translate" />
             <Button id="searchButton" fx:id="searchButton" layoutX="33.0" layoutY="131.0" mnemonicParsing="false" onAction="#search" prefHeight="67.0" prefWidth="98.0" text="Search" />
             <Button id="backButton" fx:id="backButton" layoutX="33.0" layoutY="376.0" mnemonicParsing="false" onAction="#back" prefHeight="67.0" prefWidth="98.0" text="Back" />
          </children></AnchorPane>
+      <AnchorPane fx:id="contentArea" layoutX="178.0" layoutY="108.0" prefHeight="478.0" prefWidth="590.0" />
 </children>
 </AnchorPane>

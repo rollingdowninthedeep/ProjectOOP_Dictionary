@@ -19,13 +19,7 @@ public class Study implements Initializable {
     @FXML
     private AnchorPane scene;
     @FXML
-    private StackPane contentArea;
-    @FXML
-    private Button searchButton;
-    @FXML
-    private Button translateButton;
-    @FXML
-    private Button backButton;
+    private AnchorPane contentArea;
 
     @FXML
     public void search() {
