@@ -7,5 +7,6 @@
    <children>
       <Button fx:id="button" layoutX="274.0" layoutY="188.0" mnemonicParsing="false" onAction="#action" text="Button" />
       <Label fx:id="label" layoutX="242.0" layoutY="129.0" prefHeight="17.0" prefWidth="117.0"/>
+
    </children>
 </AnchorPane>

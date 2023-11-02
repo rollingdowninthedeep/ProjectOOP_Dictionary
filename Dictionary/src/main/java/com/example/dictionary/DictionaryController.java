@@ -25,6 +25,6 @@ public class DictionaryController  {
     }
     @FXML
     public void study(ActionEvent actionEvent) throws Exception {
-        this.openScene((Stage)studyButton.getScene().getWindow(), "Study.fxml");
+    this.openScene((Stage)studyButton.getScene().getWindow(), "Study.fxml");
     }
 }

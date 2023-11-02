@@ -17,4 +17,5 @@ public class Translate {
     public void action(ActionEvent event) {
 
     }
+
 }
