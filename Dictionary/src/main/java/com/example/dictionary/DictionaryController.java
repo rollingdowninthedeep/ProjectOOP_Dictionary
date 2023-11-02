@@ -4,18 +4,27 @@ import javafx.event.ActionEvent;
 import javafx.fxml.*;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.layout.*;
+import javafx.stage.Stage;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-
-public class DictionaryController {
+public class DictionaryController  {
     @FXML
-    private AnchorPane mainContent;
+    private Button studyButton;
+    @FXML
+    private Button playButton;
 
+    protected static WordList wordList = new WordList();
+    public void openScene(Stage window, String path) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource(path));
+        Scene scene =  new Scene(root);
+        window.setScene(scene);
+        window.centerOnScreen();
+        window.show();
+    }
     @FXML
     public void study(ActionEvent actionEvent) throws Exception {
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("Study.fxml"));
-        mainContent.getChildren().setAll(pane);
+    this.openScene((Stage)studyButton.getScene().getWindow(), "Study.fxml");
     }
 }

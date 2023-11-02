@@ -1,40 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="mainContent" fx:id="mainContent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.DictionaryController">
+<AnchorPane id="mainContent" fx:id="mainContent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="449.0" prefWidth="493.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.DictionaryController">
+
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
    <children>
-      <VBox id="mainVBox" fx:id="mainVBox" alignment="CENTER" layoutX="372.0" layoutY="221.0" prefHeight="349.0" prefWidth="256.0" spacing="20.0" AnchorPane.topAnchor="221.0">
+      <VBox id="mainVBox" fx:id="mainVBox" alignment="TOP_CENTER" layoutX="153.0" layoutY="165.0" prefHeight="249.0" prefWidth="189.0" spacing="20.0" AnchorPane.topAnchor="165.0">
+
          <children>
-            <Button id="studyButton" fx:id="studyButton" mnemonicParsing="false" onAction="#study" prefHeight="65.0" prefWidth="117.0" text="Study">
+            <Button id="studyButton" fx:id="studyButton" mnemonicParsing="false" onAction="#study" prefHeight="54.0" prefWidth="103.0" text="Study">
                <font>
                   <Font size="13.0" />
-               </font></Button>
-            <Button id="playButton" fx:id="playButton" mnemonicParsing="false" prefHeight="65.0" prefWidth="117.0" text="Play Games">
+               </font>
+            </Button>
+            <Button id="playButton" fx:id="playButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="90.0" text="Play Games">
                <font>
                   <Font size="13.0" />
-               </font></Button>
-            <Button id="contactButton" fx:id="contactButton" mnemonicParsing="false" prefHeight="65.0" prefWidth="117.0" text="Contact Us" />
-            <Button id="exitButton" fx:id="exitButton" mnemonicParsing="false" prefHeight="65.0" prefWidth="117.0" text="Exit" />
+               </font>
+            </Button>
+            <Button id="contactButton" fx:id="contactButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="90.0" text="Contact Us" />
+            <Button id="exitButton" fx:id="exitButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="90.0" text="Exit" />
          </children>
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
       </VBox>
-      <Label id="mainText" fx:id="mainText" layoutX="365.0" layoutY="159.0" text="What do you want to do?" textAlignment="CENTER">
+      <Label id="mainText" fx:id="mainText" layoutX="147.0" layoutY="130.0" text="What do you want to do?" textAlignment="CENTER">
          <font>
-            <Font size="24.0" />
+            <Font name="Bauhaus 93" size="18.0" />
          </font></Label>
-      <Label id="mainTitle" fx:id="mainTitle" alignment="CENTER" contentDisplay="CENTER" layoutX="385.0" layoutY="20.0" prefHeight="102.0" prefWidth="230.0" text="TITLE">
+      <Label id="mainTitle" fx:id="mainTitle" layoutX="187.0" layoutY="42.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="TITLE">
+
          <font>
-            <Font size="87.0" />
+            <Font name="Forte" size="48.0" />
          </font>
       </Label>
    </children>
