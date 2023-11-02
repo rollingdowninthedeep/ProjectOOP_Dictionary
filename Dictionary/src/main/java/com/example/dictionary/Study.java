@@ -15,47 +15,46 @@ import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-public class Study implements Initializable {
+public class Study extends DictionaryController implements Initializable {
     @FXML
-    private AnchorPane scene;
-    @FXML
-    private AnchorPane contentArea;
+    protected AnchorPane contentArea;
 
     @FXML
     public void search() {
-      try {
-        AnchorPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Search.fxml")));
-        contentArea.getChildren().setAll(content);
-      } catch (IOException e) {
-        e.printStackTrace();
-      }
+        try {
+            AnchorPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Search.fxml")));
+            contentArea.getChildren().clear();
+            contentArea.getChildren().add(content);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
     public void translate() {
-      try {
-        AnchorPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Translate.fxml")));
-        contentArea.getChildren().setAll(content);
-      } catch (IOException e) {
-        e.printStackTrace();
-      }
+        try {
+            AnchorPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Translate.fxml")));
+            contentArea.getChildren().clear();
+            contentArea.getChildren().add(content);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
     public void back() {
-      try {
-        AnchorPane scene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("dictionary-view.fxml")));
-        this.scene.getChildren().setAll(scene);
-      } catch (IOException e) {
-        e.printStackTrace();
-      }
+        try {
+            openScene((Stage) contentArea.getScene().getWindow(), "dictionary-view.fxml");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
             AnchorPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Translate.fxml")));
-            contentArea.getChildren().setAll(content);
+            contentArea.getChildren().add(content);
         } catch (IOException e) {
             e.printStackTrace();
         }

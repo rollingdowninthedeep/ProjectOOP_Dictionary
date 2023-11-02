@@ -15,18 +15,6 @@ public class Translate {
     @FXML
     public Label label;
     public void action(ActionEvent event) {
-        Connection con = DictionaryController.databaseConnection.getConnection();
 
-        String click = "SELECT el FROM wordlist;";
-
-        try {
-            Statement statement = con.createStatement();
-            ResultSet queryOutput = statement.executeQuery(click);
-            while (queryOutput.next()){
-                label.setText(queryOutput.getString("el"));
-            }
-        } catch (Exception e){
-            e.getStackTrace();
-        }
     }
 }

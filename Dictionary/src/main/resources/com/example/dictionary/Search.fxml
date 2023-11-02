@@ -1,21 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="478.0" prefWidth="590.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.Search">
-   <children>
-      <ListView id="searchListView" fx:id="searchListView" editable="true" fixedCellSize="5.0" layoutX="14.0" layoutY="54.0" prefHeight="417.0" prefWidth="210.0" />
-      <ScrollBar id="searchScrollBar" fx:id="searchScrollBar" layoutX="206.0" layoutY="53.0" opacity="0.75" orientation="VERTICAL" prefHeight="417.0" prefWidth="18.0" />
-      <TextField id="searchTextField" fx:id="searchTextField" layoutX="14.0" layoutY="12.0" onKeyPressed="#searchFieldAction" prefHeight="31.0" prefWidth="210.0" promptText="Search anything you want..." />
-      <AnchorPane id="contentArea" fx:id="contentArea" layoutX="224.0" layoutY="53.0" prefHeight="417.0" prefWidth="366.0">
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="478.0" prefWidth="590.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.Search">
+    <children>
+        <ListView id="searchListView" fx:id="searchListView" editable="true" fixedCellSize="30.0" layoutX="14.0" layoutY="54.0" onMouseClicked="#onMouseClickedAction" prefHeight="356.0" prefWidth="210.0" />
+        <TextField id="searchTextField" fx:id="searchTextField" layoutX="14.0" layoutY="12.0" onKeyReleased="#searchFieldAction" prefHeight="31.0" prefWidth="210.0" promptText="Type somthing..." />
+      <Button layoutX="14.0" layoutY="426.0" mnemonicParsing="false" onAction="#onAddAction" prefHeight="25.0" prefWidth="210.0" text="Add a word..." />
+        <AnchorPane fx:id="resultArea" layoutX="224.0" layoutY="53.0" prefHeight="417.0" prefWidth="333.0" visible="false">
          <children>
-            <Label fx:id="titleLabel" prefHeight="37.0" prefWidth="366.0" />
-            <Label fx:id="contentLabel" layoutY="37.0" prefHeight="379.0" prefWidth="366.0" />
+            <TextArea id="tittleText" fx:id="titleText" editable="false" layoutX="14.0" prefHeight="54.0" prefWidth="338.0" />
+            <TextArea id="contentText" fx:id="contentText" editable="false" layoutX="14.0" layoutY="61.0" prefHeight="295.0" prefWidth="338.0" wrapText="true" />
+            <Button fx:id="speechButton" layoutX="317.0" layoutY="15.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="24.0" />
+            <Button fx:id="updateButton" layoutX="228.0" layoutY="372.0" mnemonicParsing="false" onAction="#onUpdateAction" text="Update" />
+            <Button fx:id="deleteButton" layoutX="304.0" layoutY="372.0" mnemonicParsing="false" onAction="#onDeleteAction" text="Delete" />
+         </children></AnchorPane>
+      <AnchorPane fx:id="fixingArea" layoutX="224.0" layoutY="53.0" prefHeight="417.0" prefWidth="355.0" visible="false">
+         <children>
+            <TextArea id="tittleText" fx:id="targetText" layoutX="15.0" prefHeight="54.0" prefWidth="338.0" />
+            <TextArea id="contentText" fx:id="meaningText" layoutX="15.0" layoutY="61.0" prefHeight="295.0" prefWidth="338.0" wrapText="true" />
+            <Button fx:id="saveUpdateButton" layoutX="317.0" layoutY="323.0" mnemonicParsing="false" onAction="#onSaveAction" prefHeight="25.0" prefWidth="24.0" />
          </children>
       </AnchorPane>
-   </children>
+    </children>
 </AnchorPane>
