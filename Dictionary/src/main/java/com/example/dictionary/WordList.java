@@ -54,6 +54,7 @@ public class WordList {
         return list;
     }
     public int searchWord(String keyWord){
+        if(keyWord.isBlank() || keyWord.isEmpty()) return -1;
         Comparator<Word> comparator = new Comparator<Word>() {
             @Override
             public int compare(Word o1, Word o2) {
