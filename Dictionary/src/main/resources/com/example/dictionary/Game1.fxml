@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="game1" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-radius: 40px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.Game1">
    <children>
       <Button layoutY="567.0" mnemonicParsing="false" onAction="#back" prefHeight="37.0" prefWidth="79.0" text="Back" />
+      <Label layoutX="210.0" layoutY="61.0" prefHeight="146.0" prefWidth="545.0" style="-fx-background-color: blue;" text="Câu hỏi" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="A" layoutX="210.0" layoutY="257.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="219.0" style="-fx-background-radius: 40px;" text="Button" />
+      <Button fx:id="C" layoutX="210.0" layoutY="411.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="219.0" style="-fx-background-radius: 40px;" text="Button" />
+      <Button fx:id="D" layoutX="537.0" layoutY="411.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="219.0" style="-fx-background-radius: 40px;" text="Button" />
+      <Button fx:id="B" layoutX="537.0" layoutY="257.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="219.0" style="-fx-background-radius: 40px;" text="Button" />
    </children>
 </AnchorPane>
