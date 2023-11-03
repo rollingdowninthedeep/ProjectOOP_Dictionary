@@ -16,6 +16,7 @@ public class DictionaryController  {
     private Button playButton;
 
     protected static WordList wordList = new WordList();
+    protected static final SpeechEngine speechEngine = new SpeechEngine();
     public void openScene(Stage window, String path) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource(path));
         Scene scene =  new Scene(root);
