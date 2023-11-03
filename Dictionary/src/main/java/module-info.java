@@ -5,7 +5,8 @@ module com.example.dictionary {
     requires org.controlsfx.controls;
     requires net.synedra.validatorfx;
     requires org.kordamp.bootstrapfx.core;
+  requires java.sql;
 
-    opens com.example.dictionary to javafx.fxml;
+  opens com.example.dictionary to javafx.fxml;
     exports com.example.dictionary;
 }
