@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="mainContent" fx:id="mainContent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.DictionaryController">
+<AnchorPane id="mainContent" fx:id="mainContent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-radius: 40px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.DictionaryController">
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
@@ -23,7 +23,7 @@
                   <Font size="13.0" />
                </font></Button>
             <Button id="contactButton" fx:id="contactButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="90.0" text="Contact Us" />
-            <Button id="exitButton" fx:id="exitButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="90.0" text="Exit" />
+            <Button id="exitButton" fx:id="exitButton" mnemonicParsing="false" onAction="#exit" prefHeight="50.0" prefWidth="90.0" text="Exit" />
          </children>
          <opaqueInsets>
             <Insets />
