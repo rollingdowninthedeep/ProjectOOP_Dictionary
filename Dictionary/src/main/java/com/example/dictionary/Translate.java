@@ -1,20 +1,30 @@
 package com.example.dictionary;
 
 import javafx.event.ActionEvent;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import org.controlsfx.control.action.Action;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 
-public class Translate {
+public class Translate extends Study implements Initializable {
 
     @FXML
-    public Label label;
-    public void action(ActionEvent event) {
+    private TextArea inputText;
+
+    @FXML
+    private TextArea ouputText;
+
+    @FXML
+    public void initialize() {
+
+    }
+    @FXML
+    public void swap() {
+
+    }
+
+    @FXML
+    public void translateClick() {
 
     }
 
