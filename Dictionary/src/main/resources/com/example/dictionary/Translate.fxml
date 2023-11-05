@@ -78,6 +78,5 @@
          </children>
       </Pane>
       <Accordion />
-
    </children>
 </AnchorPane>
