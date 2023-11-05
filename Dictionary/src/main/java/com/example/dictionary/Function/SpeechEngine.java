@@ -1,4 +1,4 @@
-package com.example.dictionary;
+package com.example.dictionary.Function;
 
 import com.darkprograms.speech.synthesiser.Synthesiser;
 import com.darkprograms.speech.synthesiser.SynthesiserV2;

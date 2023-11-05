@@ -12,4 +12,8 @@ module com.example.dictionary {
 
     opens com.example.dictionary to javafx.fxml;
     exports com.example.dictionary;
+    exports com.example.dictionary.Controller;
+    opens com.example.dictionary.Controller to javafx.fxml;
+    exports com.example.dictionary.Function;
+    opens com.example.dictionary.Function to javafx.fxml;
 }

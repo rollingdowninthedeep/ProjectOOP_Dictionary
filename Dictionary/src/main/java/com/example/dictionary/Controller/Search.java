@@ -1,5 +1,6 @@
-package com.example.dictionary;
+package com.example.dictionary.Controller;
 
+import com.example.dictionary.Function.Word;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
