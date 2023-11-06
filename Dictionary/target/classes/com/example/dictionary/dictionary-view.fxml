@@ -12,24 +12,30 @@
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
    <children>
-      <VBox id="mainVBox" fx:id="mainVBox" alignment="TOP_CENTER" layoutX="404.0" layoutY="238.0" prefHeight="249.0" prefWidth="189.0" spacing="20.0" AnchorPane.topAnchor="238.0">
+      <VBox id="mainVBox" fx:id="mainVBox" alignment="TOP_CENTER" layoutX="405.0" layoutY="243.0" prefHeight="289.0" prefWidth="189.0" spacing="20.0" AnchorPane.topAnchor="243.0">
          <children>
-            <Button id="studyButton" fx:id="studyButton" mnemonicParsing="false" onAction="#study" prefHeight="50.0" prefWidth="90.0" text="Study">
+            <Button id="studyButton" fx:id="studyButton" mnemonicParsing="false" onAction="#study" prefHeight="48.0" prefWidth="143.0" style="-fx-background-radius: 10px;" text="Study" textFill="#3596d7">
                <font>
-                  <Font size="13.0" />
+                  <Font name="Aharoni Bold" size="18.0" />
                </font></Button>
-            <Button id="playButton" fx:id="playButton" mnemonicParsing="false" onAction="#play" prefHeight="50.0" prefWidth="90.0" text="Play Games">
+            <Button id="playButton" fx:id="playButton" mnemonicParsing="false" onAction="#play" prefHeight="53.0" prefWidth="144.0" style="-fx-background-radius: 10px;" text="Play Games" textFill="#3596d7">
                <font>
-                  <Font size="13.0" />
+                  <Font name="Aharoni Bold" size="18.0" />
                </font></Button>
-            <Button id="contactButton" fx:id="contactButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="90.0" text="Contact Us" />
-            <Button id="exitButton" fx:id="exitButton" mnemonicParsing="false" onAction="#exit" prefHeight="50.0" prefWidth="90.0" text="Exit" />
+            <Button id="contactButton" fx:id="contactButton" mnemonicParsing="false" prefHeight="53.0" prefWidth="143.0" style="-fx-background-radius: 10px;" text="Contact Us" textFill="#3596d7">
+               <font>
+                  <Font name="Aharoni Bold" size="18.0" />
+               </font></Button>
+            <Button id="exitButton" fx:id="exitButton" mnemonicParsing="false" onAction="#exit" prefHeight="49.0" prefWidth="141.0" style="-fx-background-radius: 10px;" text="Exit" textFill="#3596d7">
+               <font>
+                  <Font name="Aharoni Bold" size="18.0" />
+               </font></Button>
          </children>
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
       </VBox>
-      <Label id="mainText" fx:id="mainText" layoutX="399.0" layoutY="194.0" text="What do you want to do?" textAlignment="CENTER">
+      <Label id="mainText" fx:id="mainText" layoutX="399.0" layoutY="194.0" prefHeight="20.0" prefWidth="208.0" text="What do you want to do?" textAlignment="CENTER">
          <font>
             <Font name="Bauhaus 93" size="18.0" />
          </font></Label>

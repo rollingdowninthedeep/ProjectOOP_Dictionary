@@ -17,7 +17,7 @@
                 <Font name="Forte" size="58.0" />
             </font>
         </Button>
-        <Button fx:id="back" layoutX="14.0" layoutY="544.0" mnemonicParsing="false" onAction="#back" prefHeight="42.0" prefWidth="88.0" text="back" />
+        <Button fx:id="back" layoutX="14.0" layoutY="544.0" mnemonicParsing="false" onAction="#back" prefHeight="42.0" prefWidth="88.0" style="-fx-background-radius: 10px;" text="back" />
         <Button fx:id="game2" layoutX="571.0" layoutY="241.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="309.0" style="-fx-background-radius: 70px;" text="Game2" textFill="#3e75b0">
             <font>
                 <Font name="Forte" size="58.0" />

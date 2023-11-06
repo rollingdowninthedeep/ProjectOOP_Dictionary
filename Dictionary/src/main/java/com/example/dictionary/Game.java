@@ -12,6 +12,7 @@ import java.util.Objects;
 public class Game {
     @FXML
     private AnchorPane game;
+
     public void back(ActionEvent actionEvent) throws IOException {
         try {
             AnchorPane scene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("dictionary-view.fxml")));
