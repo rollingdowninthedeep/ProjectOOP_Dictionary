@@ -1,12 +1,12 @@
-package com.example.dictionary;
+package DictionaryApp.Controller;
 
+import DictionaryApp.Feature.SpeechEngine;
+import DictionaryApp.Feature.WordList;
 import javafx.event.ActionEvent;
 import javafx.fxml.*;
-import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
 public class DictionaryController  {
@@ -14,7 +14,6 @@ public class DictionaryController  {
     private Button studyButton;
     @FXML
     private Button playButton;
-
     protected static WordList wordList = new WordList();
     protected static final SpeechEngine speechEngine = new SpeechEngine();
     public void openScene(Stage window, String path) throws Exception {
@@ -26,6 +25,6 @@ public class DictionaryController  {
     }
     @FXML
     public void study(ActionEvent actionEvent) throws Exception {
-    this.openScene((Stage)studyButton.getScene().getWindow(), "Study.fxml");
+        this.openScene((Stage)studyButton.getScene().getWindow(), "/Views/Study.fxml");
     }
 }
