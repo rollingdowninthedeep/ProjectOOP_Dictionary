@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.Color?>
 
-<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="478.0" prefWidth="590.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.Controller.Addition">
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="478.0" prefWidth="590.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DictionaryApp.Controller.Addition">
     <children>
         <ListView id="searchListView" fx:id="searchListView" fixedCellSize="30.0" layoutX="14.0" layoutY="54.0" prefHeight="356.0" prefWidth="210.0" />
       <TextField id="searchTextField" fx:id="addTextField" layoutX="14.0" layoutY="12.0" onKeyPressed="#hideWord" onKeyReleased="#addFieldAction" prefHeight="31.0" prefWidth="210.0" promptText="What word you want to add?" />

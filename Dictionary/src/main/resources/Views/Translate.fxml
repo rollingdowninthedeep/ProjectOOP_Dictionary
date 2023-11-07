@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.Controller.Translate">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DictionaryApp.Controller.Translate">
 
    <children>
       <Pane layoutX="29.0" layoutY="73.0" prefHeight="306.0" prefWidth="543.0">
@@ -34,7 +34,7 @@
                      <graphic>
                         <ImageView fitHeight="44.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../images/anh.jpg" />
+                              <Image url="@../images/anh.jpg" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -46,7 +46,7 @@
                      <graphic>
                         <ImageView fitHeight="44.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../images/vietnam.jpg" />
+                              <Image url="@../images/vietnam.jpg" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -55,7 +55,7 @@
                      <graphic>
                         <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../images/muiten.png" />
+                              <Image url="@../images/muiten.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -73,7 +73,7 @@
             </Label>
             <ImageView fitHeight="48.0" fitWidth="93.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../images/translate.png" />
+                  <Image url="@../images/translate.png" />
                </image>
             </ImageView>
          </children>

@@ -1,4 +1,4 @@
-package com.example.dictionary;
+package DictionaryApp;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -10,7 +10,7 @@ import java.io.IOException;
 public class DictionaryApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("dictionary-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/dictionary-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Learn English App");
         stage.setScene(scene);
