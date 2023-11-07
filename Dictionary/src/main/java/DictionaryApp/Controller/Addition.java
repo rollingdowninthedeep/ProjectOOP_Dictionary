@@ -1,5 +1,6 @@
-package com.example.dictionary;
+package DictionaryApp.Controller;
 
+import DictionaryApp.Feature.Word;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -8,9 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 
-import java.io.IOException;
 import java.net.URL;
-import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class Addition extends Study implements Initializable {
@@ -68,7 +67,7 @@ public class Addition extends Study implements Initializable {
         wordList.insertWord(word);
 
         try {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("Search.fxml"));
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("/Views/Search.fxml"));
             mainPane.getChildren().clear();
             mainPane.getChildren().add(pane);
         } catch (Exception e) {
@@ -79,7 +78,7 @@ public class Addition extends Study implements Initializable {
     @FXML
     public void onCancelAction() {
         try {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("Search.fxml"));
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("/Views/Search.fxml"));
             mainPane.getChildren().clear();
             mainPane.getChildren().add(pane);
         } catch (Exception e) {

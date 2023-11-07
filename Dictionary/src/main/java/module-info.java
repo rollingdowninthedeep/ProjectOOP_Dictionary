@@ -1,4 +1,4 @@
-module com.example.dictionary {
+module DictionaryApp {
     requires javafx.controls;
     requires javafx.fxml;
 
@@ -10,6 +10,10 @@ module com.example.dictionary {
     requires java.google.speech.api;
     requires jlayer;
 
-    opens com.example.dictionary to javafx.fxml;
-    exports com.example.dictionary;
+    opens DictionaryApp to javafx.fxml;
+    exports DictionaryApp;
+    exports DictionaryApp.Controller;
+    opens DictionaryApp.Controller to javafx.fxml;
+    exports DictionaryApp.Feature;
+    opens DictionaryApp.Feature to javafx.fxml;
 }

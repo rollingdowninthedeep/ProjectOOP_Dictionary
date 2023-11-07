@@ -1,4 +1,4 @@
-package com.example.dictionary;
+package DictionaryApp.Feature;
 
 import com.darkprograms.speech.synthesiser.Synthesiser;
 import com.darkprograms.speech.synthesiser.SynthesiserV2;
@@ -36,6 +36,7 @@ public class SpeechEngine {
             }
         }
     }
+
     public void speak(String text) {
         Thread thread = new Thread(new SpeechEngineThread(text, this.synthesiserV2));
         thread.setDaemon(false);
