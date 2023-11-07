@@ -1,0 +1,16 @@
+.translateBt
+{
+  -fx-background-color : #a4c0db;
+  -fx-background-radius : 6 6 6 6;
+}
+
+.translateBt:hover
+{
+  -fx-background-color : #849fba;
+  -fx-background-radius : 6 6 6 6;
+}
+.translateBt:pressed
+{
+  -fx-background-color : #a4c0db;
+  -fx-background-radius : 6 6 6 6;
+}

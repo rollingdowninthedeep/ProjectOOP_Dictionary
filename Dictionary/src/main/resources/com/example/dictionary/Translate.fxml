@@ -11,13 +11,13 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.Translate">
+<AnchorPane prefHeight="422.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.Translate">
    <children>
-      <Pane layoutX="29.0" layoutY="73.0" prefHeight="306.0" prefWidth="543.0">
+      <Pane layoutX="29.0" layoutY="73.0" prefHeight="322.0" prefWidth="543.0">
          <children>
             <TextArea id="inputText" fx:id="inputText" layoutY="64.0" prefHeight="184.0" prefWidth="271.0" promptText="Nhập..." />
             <TextArea id="outputText" fx:id="ouputText" layoutX="271.0" layoutY="64.0" prefHeight="184.0" prefWidth="271.0" />
-            <Button id="translateBt" fx:id="translateBt" layoutX="214.0" layoutY="257.0" mnemonicParsing="false" onAction="#translateClick" prefHeight="42.0" prefWidth="115.0" text="Translate">
+            <Button id="translateBt" fx:id="translateBt" layoutX="214.0" layoutY="266.0" mnemonicParsing="false" onAction="#translateClick" prefHeight="42.0" prefWidth="115.0" styleClass="translateBt" stylesheets="@Translate.css" text="Translate">
                <font>
                   <Font name="Calibri Bold" size="20.0" />
                </font></Button>
@@ -70,13 +70,14 @@
                   <Font name="System Bold Italic" size="30.0" />
                </font>
             </Label>
-            <ImageView fitHeight="48.0" fitWidth="93.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="34.0" fitWidth="38.0" layoutX="25.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/translate.png" />
                </image>
             </ImageView>
          </children>
       </Pane>
+      <Accordion />
       <Accordion />
    </children>
 </AnchorPane>
