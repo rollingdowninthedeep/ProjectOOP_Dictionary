@@ -1,4 +1,4 @@
-package com.example.dictionary.Function;
+package DictionaryApp.Feature;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -14,10 +14,11 @@ public class DatabaseConnection {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             databaseLink = DriverManager.getConnection(url, databaseUsername, databasePassword);
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
     public Connection getConnection() {
         return databaseLink;
     }

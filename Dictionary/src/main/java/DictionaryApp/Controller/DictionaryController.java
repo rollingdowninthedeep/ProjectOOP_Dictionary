@@ -1,7 +1,7 @@
-package com.example.dictionary.Controller;
+package DictionaryApp.Controller;
 
-import com.example.dictionary.Function.SpeechEngine;
-import com.example.dictionary.Function.WordList;
+import DictionaryApp.Feature.SpeechEngine;
+import DictionaryApp.Feature.WordList;
 import javafx.event.ActionEvent;
 import javafx.fxml.*;
 import javafx.scene.Parent;
@@ -14,8 +14,7 @@ public class DictionaryController  {
     private Button studyButton;
     @FXML
     private Button playButton;
-
-    protected static WordList wordList;
+    protected static WordList wordList = new WordList();
     protected static final SpeechEngine speechEngine = new SpeechEngine();
     public void openScene(Stage window, String path) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource(path));
@@ -26,6 +25,6 @@ public class DictionaryController  {
     }
     @FXML
     public void study(ActionEvent actionEvent) throws Exception {
-        this.openScene((Stage)studyButton.getScene().getWindow(), "Study.fxml");
+        this.openScene((Stage)studyButton.getScene().getWindow(), "/Views/Study.fxml");
     }
 }

@@ -1,6 +1,5 @@
-package com.example.dictionary.Controller;
+package DictionaryApp.Controller;
 
-import com.example.dictionary.Controller.DictionaryController;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -20,7 +19,7 @@ public class Study extends DictionaryController implements Initializable {
     @FXML
     public void search() {
         try {
-            AnchorPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Search.fxml")));
+            AnchorPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/Views/Search.fxml")));
             contentArea.getChildren().clear();
             contentArea.getChildren().add(content);
         } catch (IOException e) {
@@ -31,7 +30,7 @@ public class Study extends DictionaryController implements Initializable {
     @FXML
     public void translate() {
         try {
-            AnchorPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Translate.fxml")));
+            AnchorPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/Views/Translate.fxml")));
             contentArea.getChildren().clear();
             contentArea.getChildren().add(content);
         } catch (IOException e) {
@@ -42,7 +41,7 @@ public class Study extends DictionaryController implements Initializable {
     @FXML
     public void back() {
         try {
-            openScene((Stage) contentArea.getScene().getWindow(), "dictionary-view.fxml");
+            openScene((Stage) contentArea.getScene().getWindow(), "/Views/dictionary-view.fxml");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -51,7 +50,7 @@ public class Study extends DictionaryController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
-            AnchorPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Translate.fxml")));
+            AnchorPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/Views/Translate.fxml")));
             contentArea.getChildren().add(content);
         } catch (IOException e) {
             e.printStackTrace();

@@ -1,4 +1,4 @@
-package com.example.dictionary.Function;
+package DictionaryApp.Feature;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

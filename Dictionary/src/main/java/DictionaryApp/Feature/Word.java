@@ -1,13 +1,14 @@
-package com.example.dictionary.Function;
+package DictionaryApp.Feature;
 
 public class Word {
     private String origin;
     private String meaning;
 
-    public Word(String origin, String meaning){
+    public Word(String origin, String meaning) {
         this.origin = origin;
         this.meaning = meaning;
     }
+
     public String getOrigin() {
         return origin;
     }
