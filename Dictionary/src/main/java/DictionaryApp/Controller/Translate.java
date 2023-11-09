@@ -44,11 +44,11 @@ public class Translate implements Initializable {
         outLanguage = tmpLanguage;
 
         if (outVietnamese) {
-            labelEnglish.setLayoutX(522);
-            labelVietnamese.setLayoutX(157);
+            labelEnglish.setLayoutX(535);
+            labelVietnamese.setLayoutX(132);
         } else {
-            labelVietnamese.setLayoutX(522);
-            labelEnglish.setLayoutX(157);
+            labelVietnamese.setLayoutX(502);
+            labelEnglish.setLayoutX(135);
         }
 
         outVietnamese = !outVietnamese;
@@ -60,7 +60,7 @@ public class Translate implements Initializable {
     public void translateClick() throws IOException {
         try {
             String urlStr = "https://script.google.com/macros/s/AKfycbyTDUKFOzo-zJf7zFJYoC7ChPiXjfrTT6o0eg6ortIA5FzW01lBSCNmQfoOI6AYG75E/exec" +
-                "?q=" + URLEncoder.encode(inputText.getText(), "UTF-8") +
+                "?q=" + URLEncoder.encode(inputText.getText(), "UTF-8").replace("%22", "\"") +
                 "&target=" + outLanguage +
                 "&source=" + inLanguage;
             URL url = new URL(urlStr);
@@ -78,7 +78,7 @@ public class Translate implements Initializable {
             in.close();
             connect.disconnect();
             String translation = input.toString();
-            outputText.setText(translation);
+            outputText.setText(translation.replaceAll("&quot;", "\""));
         } catch (Exception e) {
             e.printStackTrace();
         }

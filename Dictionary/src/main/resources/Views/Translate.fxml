@@ -20,11 +20,11 @@
    <children>
       <Pane id="paneTranslate" fx:id="paneTranslate" prefHeight="600.0" prefWidth="795.0" styleClass="paneTranslate" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <TextArea id="inputText" fx:id="inputText" layoutX="16.0" layoutY="177.0" prefHeight="272.0" prefWidth="382.0" promptText="Nhập..." wrapText="true">
+            <TextArea id="inputText" fx:id="inputText" layoutX="16.0" layoutY="170.0" prefHeight="279.0" prefWidth="382.0" promptText="Nhập..." styleClass="inputText" stylesheets="@style.css" wrapText="true">
                <font>
                   <Font name="Arial" size="18.0" />
                </font></TextArea>
-            <TextArea id="outputText" fx:id="outputText" layoutX="398.0" layoutY="177.0" prefHeight="272.0" prefWidth="382.0" wrapText="true">
+            <TextArea id="outputText" fx:id="outputText" layoutX="398.0" layoutY="170.0" prefHeight="279.0" prefWidth="382.0" styleClass="outputText" stylesheets="@style.css" wrapText="true">
                <font>
                   <Font name="Arial" size="18.0" />
                </font></TextArea>
@@ -32,44 +32,46 @@
                <font>
                   <Font name="Calibri Bold" size="27.0" />
                </font></Button>
-            <Pane id="paneLanguage" fx:id="paneLanguage" layoutX="16.0" layoutY="105.0" prefHeight="72.0" prefWidth="764.0" styleClass="paneLanguage" stylesheets="@style.css">
+            <Pane id="paneLanguage" fx:id="paneLanguage" layoutX="16.0" layoutY="113.0" prefHeight="63.0" prefWidth="764.0" styleClass="paneLanguage" stylesheets="@style.css">
                <padding>
                   <Insets top="1.0" />
                </padding>
+               <children>
+                  <Label id="labelEnglish" fx:id="labelEnglish" layoutX="135.0" layoutY="18.0" prefHeight="30.0" prefWidth="108.0" text="English">
+                     <font>
+                        <Font name="Calibri Bold Italic" size="21.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/anh.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Label id="labelVietnamese" fx:id="labelVietnamese" layoutX="502.0" layoutY="18.0" prefHeight="30.0" prefWidth="152.0" text="Vietnamese">
+                     <font>
+                        <Font name="Calibri Bold Italic" size="21.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/vietnam.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Button id="swapButton" fx:id="swapButton" layoutX="349.0" layoutY="8.0" mnemonicParsing="false" onAction="#swap" prefHeight="47.0" prefWidth="64.0" styleClass="swapButton" stylesheets="@style.css">
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/muiten.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
             </Pane>
-            <Label id="labelEnglish" fx:id="labelEnglish" layoutX="157.0" layoutY="125.0" prefHeight="30.0" prefWidth="101.0" text="English">
-               <font>
-                  <Font name="Calibri Bold Italic" size="19.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="44.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/anh.jpg" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Label>
-            <Label id="labelVietnamese" fx:id="labelVietnamese" layoutX="522.0" layoutY="125.0" prefHeight="30.0" prefWidth="133.0" text="Vietnamese">
-               <font>
-                  <Font name="Calibri Bold Italic" size="19.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="44.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/vietnam.jpg" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Label>
-            <Button id="swapButton" fx:id="swapButton" layoutX="375.0" layoutY="123.0" mnemonicParsing="false" onAction="#swap" prefHeight="34.0" prefWidth="47.0">
-               <graphic>
-                  <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/muiten.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
          </children>
       </Pane>
    </children>

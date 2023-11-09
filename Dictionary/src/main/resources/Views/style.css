@@ -1,20 +1,32 @@
 .translateBt
 {
-  -fx-background-color : #72818E;
-  -fx-background-radius : 6 6 6 6;
-  -fx-text-fill: #F2F2F2;
+  -fx-border-width: 1px;
+  -fx-border-color: #000000;
+  -fx-border-style: solid;
+  -fx-border-radius: 13 13 13 13;
+  -fx-background-color : #8E9EA8;
+  -fx-background-radius : 13 13 13 13;
+  -fx-text-fill: #000000;
 }
 
 .translateBt:hover
 {
+  -fx-border-width: 2px;
+  -fx-border-color: #FFFFFF;
+  -fx-border-style: solid;
+  -fx-border-radius: 13 13 13 13;
   -fx-background-color : #525D66;
-  -fx-background-radius : 6 6 6 6;
-  -fx-text-fill: #000000;
+  -fx-background-radius : 13 13 13 13;
+  -fx-text-fill: #FFFFFF;
 }
 .translateBt:pressed
 {
+  -fx-border-width: 2px;
+  -fx-border-color: #FFFFFF;
+  -fx-border-style: solid;
+  -fx-border-radius: 13 13 13 13;
   -fx-background-color : #525D66;
-  -fx-background-radius : 6 6 6 6;
+  -fx-background-radius : 13 13 13 13;
   -fx-text-fill: #B2BBC2;
 
 }
@@ -26,5 +38,37 @@
 
 .paneLanguage
 {
-   -fx-background-color : #F2F2F2;
+  -fx-background-color : #FFFFFF;
+  -fx-background-radius : 36 36 0 0;
+  -fx-border-width: 2px;
+  -fx-border-radius: 36 36 0 0;
+  -fx-border-color: #000000;
+  -fx-border-style: solid;
 }
+
+.swapButton
+{
+  -fx-background-color: #FFFFFF;
+  -fx-background-radius: 0 0 0 0;
+}
+
+.inputText
+{
+  -fx-border-width: 2px;
+  -fx-border-color: #000000;
+  -fx-border-style: solid;
+  -fx-border-radius: 0 0 0 0;
+  -fx-background-color: #FFFFFF;
+  -fx-background-radius: 0;
+}
+
+.outputText
+{
+  -fx-border-width: 2px;
+  -fx-border-color: #000000;
+  -fx-border-style: solid;
+  -fx-border-radius: 0 0 0 0;
+  -fx-background-color: #FFFFFF;
+  -fx-background-radius: 0 0 0 0;
+}
+
