@@ -7,18 +7,42 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="Game1Results" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-radius: 40px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.Game1Results">
+<AnchorPane fx:id="Game1Results" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="795.0" style="-fx-background-radius: 40px; -fx-background-color: MintCream;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.Game1Results">
    <children>
-      <Button fx:id="back" layoutX="9.0" layoutY="550.0" mnemonicParsing="false" onAction="#Back1" prefHeight="37.0" prefWidth="74.0" style="-fx-background-radius: 10px;" text="Back" />
-      <Label layoutX="452.0" layoutY="111.0" prefHeight="80.0" prefWidth="133.0" text="Result">
+      <Button fx:id="back" layoutX="9.0" layoutY="550.0" mnemonicParsing="false" onAction="#Back1" prefHeight="37.0" prefWidth="74.0" style="-fx-background-radius: 10px; -fx-background-color: silver;" text="Back" />
+      <Label layoutX="297.0" layoutY="32.0" prefHeight="110.0" prefWidth="201.0" text="Result">
          <font>
-            <Font name="Arial Black" size="32.0" />
+            <Font name="Arial Black" size="52.0" />
          </font>
       </Label>
-      <ProgressIndicator cache="true" layoutX="486.0" layoutY="279.0" mouseTransparent="true" prefHeight="41.0" prefWidth="156.0" progress="0.33">
+      <Label layoutX="59.0" layoutY="130.0" prefHeight="67.0" prefWidth="684.0" text="Very good work !! you tried very hard, let's review your scores">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="129.0" layoutY="276.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="148.0" prefWidth="150.0" style="-fx-background-color: LightSkyBlue; -fx-background-radius: 20px; -fx-border-radius: 20px;" text="8/10" textAlignment="CENTER" textFill="#121ae6" wrapText="true">
          <opaqueInsets>
-            <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+            <Insets />
          </opaqueInsets>
+         <font>
+            <Font name="Arial" size="22.0" />
+         </font>
+         <padding>
+            <Insets bottom="52.0" left="52.0" right="52.0" top="52.0" />
+         </padding>
+      </Label>
+      <ProgressIndicator layoutX="368.0" layoutY="276.0" minHeight="148.0" minWidth="150.0" prefHeight="159.0" prefWidth="155.0" progress="0.72" style="-fx-background-color: #00FF00; -fx-progress-color: green; -fx-font-size: 20px; -fx-background-radius: 20px;">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </ProgressIndicator>
+      <ProgressIndicator layoutX="581.0" layoutY="276.0" minHeight="148.0" minWidth="150.0" prefHeight="159.0" prefWidth="155.0" progress="0.72" style="-fx-background-color: #FF3366; -fx-progress-color: red; -fx-font-size: 20px; -fx-background-radius: 20px;">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
       </ProgressIndicator>
    </children>
+   <padding>
+      <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+   </padding>
 </AnchorPane>

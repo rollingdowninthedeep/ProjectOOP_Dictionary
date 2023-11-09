@@ -5,29 +5,32 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="game1" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-radius: 40px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.Game1">
+<AnchorPane fx:id="game1" prefHeight="600.0" prefWidth="795.0" style="-fx-background-radius: 40px; -fx-background-color: MintCream;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.Game1">
    <children>
       <Button layoutX="14.0" layoutY="548.0" mnemonicParsing="false" onAction="#back" prefHeight="37.0" prefWidth="79.0" text="Back" />
-      <Label fx:id="question" layoutX="210.0" layoutY="61.0" prefHeight="146.0" prefWidth="545.0" style="-fx-background-color: Teal; -fx-background-radius: 20px;" textAlignment="JUSTIFY" wrapText="true">
+      <Label fx:id="question" layoutX="124.0" layoutY="48.0" prefHeight="146.0" prefWidth="545.0" style="-fx-background-color: royalBlue; -fx-background-radius: 20px;" textAlignment="JUSTIFY" textFill="#fff7f7" wrapText="true">
          <font>
             <Font name="Arial" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="A" layoutX="210.0" layoutY="257.0" mnemonicParsing="false" onAction="#a" prefHeight="90.0" prefWidth="219.0" style="-fx-background-radius: 20px;" textAlignment="JUSTIFY">
+      <Button fx:id="A" layoutX="124.0" layoutY="242.0" mnemonicParsing="false" onAction="#a" prefHeight="90.0" prefWidth="219.0" style="-fx-background-radius: 20px; -fx-background-color: RoyalBlue;" textAlignment="JUSTIFY" textFill="#f4efef">
          <font>
             <Font name="Arial" size="18.0" />
          </font></Button>
-      <Button fx:id="C" layoutX="210.0" layoutY="411.0" mnemonicParsing="false" onAction="#b" prefHeight="90.0" prefWidth="219.0" style="-fx-background-radius: 20px;" textAlignment="JUSTIFY">
+      <Button fx:id="A1" layoutX="449.0" layoutY="383.0" mnemonicParsing="false" onAction="#a" prefHeight="90.0" prefWidth="219.0" style="-fx-background-radius: 20px; -fx-background-color: RoyalBlue;" textAlignment="JUSTIFY" textFill="#f4efef">
          <font>
             <Font name="Arial" size="18.0" />
-         </font></Button>
-      <Button fx:id="D" layoutX="537.0" layoutY="411.0" mnemonicParsing="false" onAction="#b" prefHeight="90.0" prefWidth="219.0" style="-fx-background-radius: 20px;" textAlignment="JUSTIFY">
+         </font>
+      </Button>
+      <Button fx:id="A11" layoutX="124.0" layoutY="383.0" mnemonicParsing="false" onAction="#a" prefHeight="90.0" prefWidth="219.0" style="-fx-background-radius: 20px; -fx-background-color: RoyalBlue;" textAlignment="JUSTIFY" textFill="#f4efef">
          <font>
             <Font name="Arial" size="18.0" />
-         </font></Button>
-      <Button fx:id="B" layoutX="537.0" layoutY="257.0" mnemonicParsing="false" onAction="#b" prefHeight="90.0" prefWidth="219.0" style="-fx-background-radius: 20px;" textAlignment="JUSTIFY">
+         </font>
+      </Button>
+      <Button fx:id="A111" layoutX="449.0" layoutY="242.0" mnemonicParsing="false" onAction="#a" prefHeight="90.0" prefWidth="219.0" style="-fx-background-radius: 20px; -fx-background-color: RoyalBlue;" textAlignment="JUSTIFY" textFill="#f4efef">
          <font>
             <Font name="Arial" size="18.0" />
-         </font></Button>
+         </font>
+      </Button>
    </children>
 </AnchorPane>

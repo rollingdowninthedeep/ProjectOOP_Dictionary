@@ -10,7 +10,7 @@
 <AnchorPane prefHeight="600.0" prefWidth="795.0" style="-fx-background-color: silver;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.Search">
    <children>
       <ListView id="searchListView" fx:id="searchListView" editable="true" fixedCellSize="5.0" layoutX="14.0" layoutY="54.0" prefHeight="429.0" prefWidth="210.0" style="-fx-background-radius: 10px;" />
-      <TextField id="searchTextField" fx:id="Search" layoutX="14.0" layoutY="12.0" onKeyPressed="#searchFieldAction" prefHeight="31.0" prefWidth="210.0" promptText="Search anything you want..." style="-fx-background-radius: 20px;" />
+      <TextField id="Search" fx:id="Search" layoutX="14.0" layoutY="12.0" onKeyPressed="#searchFieldAction" prefHeight="31.0" prefWidth="210.0" promptText="Search anything you want..." style="-fx-background-radius: 20px;" />
       <Button layoutX="14.0" layoutY="497.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="210.0" style="-fx-background-radius: 10px; -fx-background-color: white;" text="Add the word... ">
          <font>
             <Font size="15.0" />
