@@ -9,6 +9,7 @@ module com.example.dictionary {
     requires java.sql;
     requires java.google.speech.api;
     requires jlayer;
+    requires json;
 
     opens com.example.dictionary to javafx.fxml;
     exports com.example.dictionary;
