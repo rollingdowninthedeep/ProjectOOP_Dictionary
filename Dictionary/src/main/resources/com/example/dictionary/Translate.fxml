@@ -22,7 +22,7 @@
                <font>
                   <Font name="Arial" size="18.0" />
                </font></TextArea>
-            <Button id="translateBt" fx:id="translateBt" layoutX="340.0" layoutY="476.0" mnemonicParsing="false" onAction="#translateClick" prefHeight="42.0" prefWidth="115.0" styleClass="translateBt" stylesheets="@Translate.css" text="Translate">
+            <Button id="translateBt" fx:id="translateBt" layoutX="340.0" layoutY="476.0" mnemonicParsing="false" onAction="#translateClick" prefHeight="42.0" prefWidth="115.0" styleClass="translateBt" stylesheets="@style.css" text="Translate">
                <font>
                   <Font name="Calibri Bold" size="20.0" />
                </font></Button>
