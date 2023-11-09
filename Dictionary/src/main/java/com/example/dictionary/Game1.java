@@ -46,14 +46,21 @@ public class Game1 {
         checkAnswer(A.getText().toString());
         if (checkAnswer(A.getText().toString())) {
             correct ++;
-        }
-        else {
+        } else {
             wrong++;
         }
 
-        counter++;
-        loadQuestion();
-
+        if (counter == 1) {
+            try {
+                AnchorPane scene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Game1Results.fxml")));
+                game1.getChildren().setAll(scene);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            counter++;
+            loadQuestion();
+        }
     }
 
     @FXML
@@ -66,9 +73,17 @@ public class Game1 {
             wrong++;
         }
 
-        counter++;
-        loadQuestion();
-
+        if (counter == 1) {
+            try {
+                AnchorPane scene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Game1Results.fxml")));
+                game1.getChildren().setAll(scene);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            counter++;
+            loadQuestion();
+        }
     }
 
     @FXML
@@ -81,8 +96,17 @@ public class Game1 {
             wrong++;
         }
 
-        counter++;
-        loadQuestion();
+        if (counter == 1) {
+            try {
+                AnchorPane scene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Game1Results.fxml")));
+                game1.getChildren().setAll(scene);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            counter++;
+            loadQuestion();
+        }
     }
 
     @FXML
@@ -95,8 +119,17 @@ public class Game1 {
             wrong++;
         }
 
-        counter++;
-        loadQuestion();
+        if (counter == 1) {
+            try {
+                AnchorPane scene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Game1Results.fxml")));
+                game1.getChildren().setAll(scene);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            counter++;
+            loadQuestion();
+        }
     }
 
     boolean checkAnswer(String answer) {

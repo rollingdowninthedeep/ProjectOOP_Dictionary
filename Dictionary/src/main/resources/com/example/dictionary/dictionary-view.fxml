@@ -2,47 +2,55 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="mainContent" fx:id="mainContent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-radius: 40px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.DictionaryController">
+<AnchorPane id="mainContent" fx:id="mainContent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-radius: 20px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.DictionaryController">
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
    <children>
-      <VBox id="mainVBox" fx:id="mainVBox" alignment="TOP_CENTER" layoutX="405.0" layoutY="243.0" prefHeight="289.0" prefWidth="189.0" spacing="20.0" AnchorPane.topAnchor="243.0">
+      <AnchorPane prefHeight="600.0" prefWidth="171.0" style="-fx-background-color: gray; -fx-background-radius: 20px;">
          <children>
-            <Button id="studyButton" fx:id="studyButton" mnemonicParsing="false" onAction="#study" prefHeight="48.0" prefWidth="143.0" style="-fx-background-radius: 10px;" text="Study" textFill="#3596d7">
+            <ImageView fitHeight="150.0" fitWidth="186.0" layoutX="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/user.png" />
+               </image></ImageView>
+            <Button layoutX="2.0" layoutY="153.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="200.0" text="Home">
                <font>
-                  <Font name="Aharoni Bold" size="18.0" />
-               </font></Button>
-            <Button id="playButton" fx:id="playButton" mnemonicParsing="false" onAction="#play" prefHeight="53.0" prefWidth="144.0" style="-fx-background-radius: 10px;" text="Play Games" textFill="#3596d7">
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="2.0" layoutY="539.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="96.0" style="-fx-background-color: gray;" text="Exit">
                <font>
-                  <Font name="Aharoni Bold" size="18.0" />
-               </font></Button>
-            <Button id="contactButton" fx:id="contactButton" mnemonicParsing="false" prefHeight="53.0" prefWidth="143.0" style="-fx-background-radius: 10px;" text="Contact Us" textFill="#3596d7">
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Button layoutX="2.0" layoutY="222.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="200.0" text="Search">
                <font>
-                  <Font name="Aharoni Bold" size="18.0" />
-               </font></Button>
-            <Button id="exitButton" fx:id="exitButton" mnemonicParsing="false" onAction="#exit" prefHeight="49.0" prefWidth="141.0" style="-fx-background-radius: 10px;" text="Exit" textFill="#3596d7">
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="2.0" layoutY="291.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="200.0" text="Translate">
                <font>
-                  <Font name="Aharoni Bold" size="18.0" />
-               </font></Button>
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="2.0" layoutY="360.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="200.0" text="Game">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="2.0" layoutY="429.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="200.0" text="Accout">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="45.0" fitWidth="57.0" layoutX="80.0" layoutY="540.0" pickOnBounds="true" preserveRatio="true" />
          </children>
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
-      </VBox>
-      <Label id="mainText" fx:id="mainText" layoutX="399.0" layoutY="194.0" prefHeight="20.0" prefWidth="208.0" text="What do you want to do?" textAlignment="CENTER">
-         <font>
-            <Font name="Bauhaus 93" size="18.0" />
-         </font></Label>
-      <Label id="mainTitle" fx:id="mainTitle" layoutX="438.0" layoutY="72.0" text="TITLE">
-         <font>
-            <Font name="Forte" size="48.0" />
-         </font>
-      </Label>
+      </AnchorPane>
+      <AnchorPane layoutX="204.0" prefHeight="600.0" prefWidth="795.0" />
    </children>
 </AnchorPane>

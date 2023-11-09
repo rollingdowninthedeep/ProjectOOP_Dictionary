@@ -1,0 +1,5 @@
+#Search {
+    -fx-border-color: black; /* Màu viền */
+    -fx-border-width: 2;     /* Độ rộng viền */
+    -fx-border-radius: 5;    /* Độ cong viền */
+}
