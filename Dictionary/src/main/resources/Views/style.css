@@ -1,16 +1,30 @@
 .translateBt
 {
-  -fx-background-color : #a4c0db;
+  -fx-background-color : #72818E;
   -fx-background-radius : 6 6 6 6;
+  -fx-text-fill: #F2F2F2;
 }
 
 .translateBt:hover
 {
-  -fx-background-color : #849fba;
+  -fx-background-color : #525D66;
   -fx-background-radius : 6 6 6 6;
+  -fx-text-fill: #000000;
 }
 .translateBt:pressed
 {
-  -fx-background-color : #a4c0db;
+  -fx-background-color : #525D66;
   -fx-background-radius : 6 6 6 6;
+  -fx-text-fill: #B2BBC2;
+
+}
+
+.paneTranslate
+{
+   -fx-background-color : #CDD0D5;
+}
+
+.paneLanguage
+{
+   -fx-background-color : #F2F2F2;
 }

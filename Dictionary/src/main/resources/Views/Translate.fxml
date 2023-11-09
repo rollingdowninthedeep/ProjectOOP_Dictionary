@@ -18,7 +18,7 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="795.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DictionaryApp.Controller.Translate">
    <children>
-      <Pane prefHeight="600.0" prefWidth="795.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <Pane id="paneTranslate" fx:id="paneTranslate" prefHeight="600.0" prefWidth="795.0" styleClass="paneTranslate" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
             <TextArea id="inputText" fx:id="inputText" layoutX="16.0" layoutY="177.0" prefHeight="272.0" prefWidth="382.0" promptText="Nhập..." wrapText="true">
                <font>
@@ -28,11 +28,11 @@
                <font>
                   <Font name="Arial" size="18.0" />
                </font></TextArea>
-            <Button id="translateBt" fx:id="translateBt" layoutX="340.0" layoutY="476.0" mnemonicParsing="false" onAction="#translateClick" prefHeight="42.0" prefWidth="115.0" styleClass="translateBt" stylesheets="@style.css" text="Translate">
+            <Button id="translateBt" fx:id="translateBt" layoutX="311.0" layoutY="477.0" mnemonicParsing="false" onAction="#translateClick" prefHeight="63.0" prefWidth="173.0" styleClass="translateBt" stylesheets="@style.css" text="Translate">
                <font>
-                  <Font name="Calibri Bold" size="20.0" />
+                  <Font name="Calibri Bold" size="27.0" />
                </font></Button>
-            <Pane id="paneLanguage" fx:id="paneLanguage" layoutX="16.0" layoutY="105.0" prefHeight="72.0" prefWidth="764.0">
+            <Pane id="paneLanguage" fx:id="paneLanguage" layoutX="16.0" layoutY="105.0" prefHeight="72.0" prefWidth="764.0" styleClass="paneLanguage" stylesheets="@style.css">
                <padding>
                   <Insets top="1.0" />
                </padding>

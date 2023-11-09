@@ -87,11 +87,6 @@ public class Translate implements Initializable {
     @FXML
     public void initialize(URL url, ResourceBundle resourceBundle) {
         outputText.setEditable(false);
-        translateBt.setDisable(true);
-
-        inputText.setOnKeyTyped(event -> {
-            translateBt.setDisable(inputText.getText().trim().isEmpty());
-        });
 
         translateBt.setOnAction(event -> {
             try {
