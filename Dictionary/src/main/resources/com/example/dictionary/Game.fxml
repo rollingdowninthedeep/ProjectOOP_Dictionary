@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="game" prefHeight="600.0" prefWidth="795.0" style="-fx-background-radius: 20px; -fx-background-color: silver;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.Game">
+<AnchorPane fx:id="game" prefHeight="600.0" prefWidth="795.0" style="-fx-background-radius: 20px; -fx-background-color: #DDDDDD;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.Game">
     <children>
         <Button fx:id="game1" layoutX="76.0" layoutY="355.0" mnemonicParsing="false" onAction="#game1" prefHeight="101.0" prefWidth="275.0" style="-fx-background-radius: 70px;" text="Chắc Nghiệm" textFill="#64676b">
             <font>

@@ -12,7 +12,7 @@
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
    <children>
-      <AnchorPane prefHeight="600.0" prefWidth="171.0" style="-fx-background-color: gray; -fx-background-radius: 20px;">
+      <AnchorPane prefHeight="600.0" prefWidth="171.0" style="-fx-background-color: #AAAAAA; -fx-background-radius: 20px;">
          <children>
             <Button layoutX="2.0" layoutY="153.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="200.0" text="Home">
                <font>
