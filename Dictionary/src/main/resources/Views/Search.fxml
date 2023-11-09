@@ -1,30 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="478.0" prefWidth="590.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DictionaryApp.Controller.Search">
-    <children>
-        <ListView id="searchListView" fx:id="searchListView" editable="true" fixedCellSize="30.0" layoutX="14.0" layoutY="54.0" onMouseClicked="#onMouseClickedAction" prefHeight="356.0" prefWidth="210.0" />
-        <TextField id="searchTextField" fx:id="searchTextField" layoutX="14.0" layoutY="12.0" onKeyReleased="#searchFieldAction" prefHeight="31.0" prefWidth="210.0" promptText="Type somthing..." />
-      <Button layoutX="14.0" layoutY="426.0" mnemonicParsing="false" onAction="#onAddAction" prefHeight="25.0" prefWidth="210.0" text="Add a word..." />
-        <AnchorPane fx:id="resultArea" layoutX="224.0" layoutY="53.0" prefHeight="417.0" prefWidth="333.0" visible="false">
-         <children>
-            <TextArea id="tittleText" fx:id="titleText" editable="false" layoutX="14.0" prefHeight="54.0" prefWidth="338.0" />
-            <TextArea id="contentText" fx:id="contentText" editable="false" layoutX="14.0" layoutY="61.0" prefHeight="295.0" prefWidth="338.0" wrapText="true" />
-            <Button fx:id="speechButton" layoutX="317.0" layoutY="15.0" mnemonicParsing="false" onAction="#onSpeechAction" prefHeight="25.0" prefWidth="24.0" />
-            <Button fx:id="updateButton" layoutX="228.0" layoutY="372.0" mnemonicParsing="false" onAction="#onUpdateAction" text="Update" />
-            <Button fx:id="deleteButton" layoutX="304.0" layoutY="372.0" mnemonicParsing="false" onAction="#onDeleteAction" text="Delete" />
-         </children></AnchorPane>
-      <AnchorPane fx:id="fixingArea" layoutX="224.0" layoutY="53.0" prefHeight="417.0" prefWidth="355.0" visible="false">
-         <children>
-            <TextArea id="tittleText" fx:id="targetText" layoutX="15.0" prefHeight="54.0" prefWidth="338.0" />
-            <TextArea id="contentText" fx:id="meaningText" layoutX="15.0" layoutY="61.0" prefHeight="295.0" prefWidth="338.0" wrapText="true" />
-            <Button fx:id="saveUpdateButton" layoutX="317.0" layoutY="323.0" mnemonicParsing="false" onAction="#onSaveAction" prefHeight="25.0" prefWidth="24.0" />
-         </children>
-      </AnchorPane>
-    </children>
+<AnchorPane prefHeight="600.0" prefWidth="795.0" style="-fx-background-color: #DDDDDD;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DictionaryApp.Controller.Search">
+  <children>
+    <ListView id="searchListView" fx:id="searchListView" editable="true" fixedCellSize="30.0" layoutX="34.0" layoutY="81.0" prefHeight="434.0" prefWidth="241.0" style="-fx-background-radius: 10px; -fx-border-color: black; -fx-border-radius: 10px;" />
+    <TextField id="searchTextField" fx:id="searchTextField" layoutX="34.0" layoutY="39.0" onKeyPressed="#searchFieldAction" prefHeight="33.0" prefWidth="241.0" promptText="Search anything you want..." style="-fx-background-radius: 20px; -fx-border-color: black; -fx-border-radius: 20px;" />
+    <Button layoutX="34.0" layoutY="530.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="241.0" style="-fx-background-radius: 10px; -fx-background-color: white; -fx-border-color: black; -fx-border-radius: 10px;" text="Add the word... ">
+      <font>
+        <Font size="15.0" />
+      </font>
+    </Button>
+    <Label fx:id="contentLabel" layoutX="306.0" layoutY="141.0" prefHeight="371.0" prefWidth="455.0" style="-fx-background-color: white; -fx-background-radius: 20px; -fx-border-radius: 20px; -fx-border-color: black;" />
+    <TextField layoutX="308.0" layoutY="68.0" prefHeight="52.0" prefWidth="332.0" style="-fx-background-radius: 10px; -fx-border-color: black; -fx-border-radius: 10px;" />
+    <Button layoutX="532.0" layoutY="530.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="109.0" style="-fx-background-radius: 7px; -fx-background-color: rgb(128,128,128);" text="Add" textFill="#fbf5f5">
+      <font>
+        <Font name="Aharoni Bold" size="12.0" />
+      </font>
+    </Button>
+    <Button layoutX="652.0" layoutY="530.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="109.0" style="-fx-background-radius: 7px; -fx-background-color: rgb(128,128,128);" text="Cancel" textFill="#fffcfc">
+      <font>
+        <Font name="Aharoni Bold" size="14.0" />
+      </font>
+    </Button>
+  </children>
 </AnchorPane>

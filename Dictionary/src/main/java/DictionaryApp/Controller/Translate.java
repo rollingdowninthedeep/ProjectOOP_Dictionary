@@ -60,7 +60,7 @@ public class Translate implements Initializable {
     public void translateClick() throws IOException {
         try {
             String urlStr = "https://script.google.com/macros/s/AKfycbyTDUKFOzo-zJf7zFJYoC7ChPiXjfrTT6o0eg6ortIA5FzW01lBSCNmQfoOI6AYG75E/exec" +
-                "?q=" + URLEncoder.encode(inputText.getText(), "UTF-8").replace("%22", "\"") +
+                "?q=" + URLEncoder.encode(inputText.getText(), "UTF-8") +
                 "&target=" + outLanguage +
                 "&source=" + inLanguage;
             URL url = new URL(urlStr);
@@ -77,8 +77,10 @@ public class Translate implements Initializable {
             }
             in.close();
             connect.disconnect();
-            String translation = input.toString();
-            outputText.setText(translation.replaceAll("&quot;", "\""));
+            String translation = input.toString().replaceAll("&quot;", "\"").
+                replaceAll("&#39;", "\'").replaceAll("&amp;", "&").
+                replaceAll("&lt;", "<").replaceAll("&gt;", ">");
+            outputText.setText(translation);
         } catch (Exception e) {
             e.printStackTrace();
         }

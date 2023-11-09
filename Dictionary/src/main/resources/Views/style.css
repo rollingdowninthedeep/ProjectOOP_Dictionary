@@ -72,3 +72,42 @@
   -fx-background-radius: 0 0 0 0;
 }
 
+.home
+{
+  -fx-background-color: #626A74;
+  -fx-background-radius: 0;
+  -fx-text-fill: #D9D9D9;
+  -fx-font-size: 27;
+}
+
+.home:hover
+{
+  -fx-background-color: #CDD0D5;
+  -fx-text-fill: #181717;
+  -fx-font-size: 31;
+}
+
+.home:pressed
+{
+  -fx-background-color: #CDD0D5;
+  -fx-text-fill: #D9D9D9;
+  -fx-font-size: 31;
+}
+
+.exit
+{
+  -fx-background-color: #626A74;
+  -fx-text-fill: #000000;
+}
+
+.exit:hover
+{
+  -fx-background-color: #626A74;
+  -fx-text-fill: #FFFFFF;
+}
+
+.exit:pressed
+{
+  -fx-background-color: #626A74;
+  -fx-text-fill: #FFFFFF;
+}
