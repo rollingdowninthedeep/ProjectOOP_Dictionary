@@ -22,14 +22,16 @@ public class Search extends Study implements Initializable {
     @FXML
     private TextField titleText;
     @FXML
-    private TextField contentText;
+    private Button contentText;
     @FXML
     private TextField targetText;
     @FXML
-    private TextField meaningText;
+    private TextArea meaningText;
 
     @FXML
-    private AnchorPane mainPane, resultArea;
+    private AnchorPane mainPane;
+    @FXML
+    private AnchorPane resultArea;
     @FXML
     private AnchorPane fixingArea;
 
@@ -85,7 +87,6 @@ public class Search extends Study implements Initializable {
         targetText.setText(titleText.getText());
         targetText.setEditable(false);
         meaningText.setText(contentText.getText());
-
         resultArea.setVisible(false);
         fixingArea.setVisible(true);
     }

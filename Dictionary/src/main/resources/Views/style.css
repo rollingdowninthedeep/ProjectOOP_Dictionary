@@ -39,9 +39,9 @@
 .paneLanguage
 {
   -fx-background-color : #FFFFFF;
-  -fx-background-radius : 36 36 0 0;
+  -fx-background-radius : 12 12 0 0;
   -fx-border-width: 2px;
-  -fx-border-radius: 36 36 0 0;
+  -fx-border-radius: 12 12 0 0;
   -fx-border-color: #000000;
   -fx-border-style: solid;
 }
@@ -57,9 +57,9 @@
   -fx-border-width: 2px;
   -fx-border-color: #000000;
   -fx-border-style: solid;
-  -fx-border-radius: 0 0 0 0;
+  -fx-border-radius: 5;
   -fx-background-color: #FFFFFF;
-  -fx-background-radius: 0;
+  -fx-background-radius: 5;
 }
 
 .outputText
@@ -135,15 +135,42 @@
 .textField2
 {
   -fx-border-width: 1px;
-  -fx-border-radius: 20;
+  -fx-border-radius: 6;
   -fx-border-style: solid;
   -fx-border-color: #000000;
   -fx-background-color: #FFFFFF;
-  -fx-background-radius: 20;
+  -fx-background-radius: 6;
 }
 
 .listView
 {
   -fx-background-color: #FFFFFF;
   -fx-border-color: #FFFFFF #000000 #FFFFFF;
+}
+
+.buttonSearch
+{
+  -fx-background-color: #FFFFFF;
+  -fx-background-radius: 20;
+  -fx-border-radius: 20;
+  -fx-border-width: 1;
+  -fx-border-color: #000000;
+}
+
+.buttonSearch:hover
+{
+  -fx-background-color: #BEC5CA;
+  -fx-background-radius: 20;
+  -fx-border-radius: 20;
+  -fx-border-width: 1;
+  -fx-border-color: #000000;
+}
+
+.buttonSearch:pressed
+{
+  -fx-background-color: #BEC5CA;
+  -fx-background-radius: 20;
+  -fx-border-radius: 20;
+  -fx-border-width: 1;
+  -fx-border-color: #000000;
 }

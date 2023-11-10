@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="mainPane" fx:id="mainPane" prefHeight="600.0" prefWidth="795.0" style="-fx-background-color: #CDD0D5;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DictionaryApp.Controller.Search">
+<AnchorPane id="mainPane" fx:id="mainPane" prefHeight="600.0" prefWidth="795.0" style="-fx-background-color: #CDD0D5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DictionaryApp.Controller.Search">
   <children>
     <TextField id="searchTextField" fx:id="searchTextField" layoutX="34.0" layoutY="39.0" onKeyPressed="#searchFieldAction" prefHeight="33.0" prefWidth="241.0" promptText="Search anything you want..." style="-fx-background-radius: 20px; -fx-border-color: black; -fx-border-radius: 20px;" />
     <Button layoutX="34.0" layoutY="536.0" mnemonicParsing="false" onAction="#onAddAction" prefHeight="37.0" prefWidth="241.0" style="-fx-background-radius: 20; -fx-background-color: white; -fx-border-color: black; -fx-border-radius: 20;" text="Add the word... ">
@@ -15,24 +23,63 @@
         <Font size="15.0" />
       </font>
     </Button>
-    <Button id="updateButton" fx:id="updateButton" layoutX="532.0" layoutY="530.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="109.0" style="-fx-background-radius: 20; -fx-background-color: #7F7F7F; -fx-border-color: #000000; -fx-border-radius: 20; -fx-border-style: solid; -fx-border-width: 1;" text="Update" textFill="WHITE">
-      <font>
-        <Font name="Roboto Bold" size="16.0" />
-      </font>
-    </Button>
-    <Button id="cancelButton" fx:id="cancelButton" layoutX="652.0" layoutY="530.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="109.0" style="-fx-background-radius: 20; -fx-background-color: #FFFFFF; -fx-border-color: #000000; -fx-border-radius: 20;" text="Cancel">
-      <font>
-        <Font name="Roboto Bold" size="16.0" />
-      </font>
-    </Button>
-      <AnchorPane layoutX="287.0" layoutY="95.0" prefHeight="409.0" prefWidth="374.0" />
-      <TextField id="titleText" fx:id="titleText" layoutX="308.0" layoutY="68.0" prefHeight="52.0" prefWidth="332.0" styleClass="textField" stylesheets="@style.css" />
-      <TextField id="contentText" fx:id="contentText" layoutX="308.0" layoutY="143.0" prefHeight="371.0" prefWidth="455.0" styleClass="textField2" stylesheets="@style.css" />
-      <Button layoutX="33.0" layoutY="83.0" mnemonicParsing="false" prefHeight="434.0" prefWidth="242.0" styleClass="textField" stylesheets="@style.css" />
-      <ListView id="searchListView" fx:id="searchListView" editable="true" fixedCellSize="30.0" layoutX="33.0" layoutY="92.0" prefHeight="416.0" prefWidth="242.0" styleClass="listView" stylesheets="@style.css">
+      <Button layoutX="33.0" layoutY="83.0" mnemonicParsing="false" prefHeight="434.0" prefWidth="241.0" styleClass="textField" stylesheets="@style.css" />
+      <ListView id="searchListView" fx:id="searchListView" editable="true" fixedCellSize="30.0" layoutX="33.0" layoutY="92.0" onMouseClicked="#onMouseClickedAction" prefHeight="416.0" prefWidth="241.0" styleClass="listView" stylesheets="@style.css">
          <opaqueInsets>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </opaqueInsets>
       </ListView>
+      <AnchorPane id="resultArea" fx:id="resultArea" layoutX="275.0" prefHeight="600.0" prefWidth="519.0" visible="false">
+         <children>
+            <TextField id="titleText" fx:id="titleText" editable="false" layoutX="32.0" layoutY="68.0" prefHeight="52.0" prefWidth="332.0" styleClass="textField" stylesheets="@style.css" AnchorPane.rightAnchor="155.0" AnchorPane.topAnchor="68.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <Button id="updateButton" fx:id="updateButton" layoutX="254.0" layoutY="530.0" mnemonicParsing="false" onAction="#onUpdateAction" prefHeight="37.0" prefWidth="109.0" styleClass="buttonSearch" stylesheets="@style.css" text="Update" AnchorPane.bottomAnchor="31.0" AnchorPane.rightAnchor="156.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button id="cancelButton" fx:id="cancelButton" layoutX="376.0" layoutY="530.0" mnemonicParsing="false" onAction="#onDeleteAction" prefHeight="37.0" prefWidth="109.0" styleClass="buttonSearch" stylesheets="@style.css" text="Delete" AnchorPane.bottomAnchor="31.0" AnchorPane.rightAnchor="34.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="409.0" layoutY="74.0" mnemonicParsing="false" onAction="#onSpeechAction" prefHeight="38.0" prefWidth="43.0" styleClass="textField" stylesheets="@style.css">
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/sound.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button id="contentText" fx:id="contentText" alignment="TOP_LEFT" layoutX="32.0" layoutY="142.0" mnemonicParsing="false" prefHeight="371.0" prefWidth="455.0" styleClass="textField2" stylesheets="@style.css" wrapText="true" AnchorPane.bottomAnchor="87.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="142.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane id="fixingArea" fx:id="fixingArea" layoutX="275.0" prefHeight="600.0" prefWidth="519.0" visible="false">
+         <children>
+            <TextField id="targetText" fx:id="targetText" editable="false" layoutX="32.0" layoutY="68.0" prefHeight="52.0" prefWidth="332.0" styleClass="textField" stylesheets="@style.css">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TextArea id="meaningText" fx:id="meaningText" layoutX="32.0" layoutY="142.0" prefHeight="371.0" prefWidth="455.0" styleClass="textField2" stylesheets="@style.css" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextArea>
+            <Button layoutX="399.0" layoutY="465.0" mnemonicParsing="false" onAction="#onSaveAction" prefHeight="34.0" prefWidth="71.0" styleClass="buttonSearch" stylesheets="@style.css" text="Save">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
   </children>
 </AnchorPane>
