@@ -20,13 +20,13 @@ public class Search extends Study implements Initializable {
     private ListView<String> searchListView = new ListView<>();
 
     @FXML
-    private TextArea titleText;
+    private TextField titleText;
     @FXML
-    private TextArea contentText;
+    private TextField contentText;
     @FXML
-    private TextArea targetText;
+    private TextField targetText;
     @FXML
-    private TextArea meaningText;
+    private TextField meaningText;
 
     @FXML
     private AnchorPane mainPane, resultArea;

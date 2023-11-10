@@ -111,3 +111,39 @@
   -fx-background-color: #626A74;
   -fx-text-fill: #FFFFFF;
 }
+
+.game1Button
+{
+  -fx-border-width: 1px;
+  -fx-border-color: #000000;
+  -fx-border-style: solid;
+  -fx-border-radius: 0 0 5 5;
+  -fx-background-color: #FFFFFF;
+  -fx-background-radius: 0 0 5 5;
+}
+
+.textField
+{
+  -fx-border-width: 1px;
+  -fx-border-radius: 10;
+  -fx-border-style: solid;
+  -fx-border-color: #000000;
+  -fx-background-color: #FFFFFF;
+  -fx-background-radius: 10;
+}
+
+.textField2
+{
+  -fx-border-width: 1px;
+  -fx-border-radius: 20;
+  -fx-border-style: solid;
+  -fx-border-color: #000000;
+  -fx-background-color: #FFFFFF;
+  -fx-background-radius: 20;
+}
+
+.listView
+{
+  -fx-background-color: #FFFFFF;
+  -fx-border-color: #FFFFFF #000000 #FFFFFF;
+}
