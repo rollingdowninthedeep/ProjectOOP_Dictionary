@@ -20,16 +20,18 @@ public class Search extends Study implements Initializable {
     private ListView<String> searchListView = new ListView<>();
 
     @FXML
-    private TextArea titleText;
+    private TextField titleText;
     @FXML
-    private TextArea contentText;
+    private Button contentText;
     @FXML
-    private TextArea targetText;
+    private TextField targetText;
     @FXML
     private TextArea meaningText;
 
     @FXML
-    private AnchorPane mainPane, resultArea;
+    private AnchorPane mainPane;
+    @FXML
+    private AnchorPane resultArea;
     @FXML
     private AnchorPane fixingArea;
 
@@ -85,7 +87,6 @@ public class Search extends Study implements Initializable {
         targetText.setText(titleText.getText());
         targetText.setEditable(false);
         meaningText.setText(contentText.getText());
-
         resultArea.setVisible(false);
         fixingArea.setVisible(true);
     }

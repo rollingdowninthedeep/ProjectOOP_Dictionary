@@ -7,10 +7,10 @@ public class DatabaseConnection {
     public Connection databaseLink;
 
     public DatabaseConnection() {
-        String databaseName = "dictionarydata"; // sửa thành tên của database
-        String databaseUsername = "root";       // sửa thành tên username
-        String databasePassword = "Quyen@030204"; // sửa thành mật khẩu của connect
-        String url = "jdbc:mysql://localhost:3306/" + databaseName;
+        String databaseName = "thanh";
+        String databaseUsername = "root";
+        String databasePassword = "Thanh@2k4";
+        String url = "jdbc:mysql://127.0.0.1:3306/" + databaseName;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             databaseLink = DriverManager.getConnection(url, databaseUsername, databasePassword);

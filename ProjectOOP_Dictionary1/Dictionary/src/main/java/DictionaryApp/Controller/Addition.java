@@ -26,7 +26,10 @@ public class Addition extends Study implements Initializable {
     private Label titleLabel, contentLabel;
 
     @FXML
-    private TextArea targetText, meaningText;
+    private TextField targetText;
+
+    @FXML
+    private TextArea meaningText;
 
     @FXML
     private AnchorPane mainPane, addingPane, showingPane;
