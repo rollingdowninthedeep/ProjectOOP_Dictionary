@@ -25,7 +25,7 @@ public class DictionaryController implements Initializable {
     @FXML
     private Button gameButton;
     @FXML
-    private Button accoutButton;
+    private Button accountButton;
     @FXML
     private Button exitButton;
     @FXML
@@ -88,9 +88,10 @@ public class DictionaryController implements Initializable {
     }
 
     @FXML
-    public void accout(ActionEvent actionEvent) {
+    public void account(ActionEvent actionEvent) {
         try {
-            AnchorPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/Views/Accout.fxml")));
+            AnchorPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(
+                "/Views/Account.fxml")));
             pane.getChildren().clear();
             pane.getChildren().add(content);
             translateButton.getStyleClass().add("pressed");

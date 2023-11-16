@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="paneAccout" fx:id="paneAccout" prefHeight="600.0" prefWidth="795.0" styleClass="paneTranslate" stylesheets="@style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DictionaryApp.Controller.Accout">
+<AnchorPane id="paneAccout" fx:id="paneAccout" prefHeight="600.0" prefWidth="795.0" styleClass="paneTranslate" stylesheets="@style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DictionaryApp.Controller.Account">
    <children>
       <ImageView id="accoutPicture" fx:id="accoutPicture" fitHeight="191.0" fitWidth="205.0" layoutX="302.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
          <image>
