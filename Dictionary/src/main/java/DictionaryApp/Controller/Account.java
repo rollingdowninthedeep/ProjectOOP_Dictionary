@@ -1,5 +1,5 @@
 package DictionaryApp.Controller;
 
-public class Accout {
+public class Account {
 
 }

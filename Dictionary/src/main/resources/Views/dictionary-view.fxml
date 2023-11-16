@@ -52,7 +52,7 @@
                   <Font name="Arial" size="27.0" />
                </font>
             </Button>
-            <Button id="accoutButton" fx:id="accoutButton" layoutX="1.0" layoutY="434.0" mnemonicParsing="false" onAction="#accout" prefHeight="64.0" prefWidth="206.0" styleClass="home" stylesheets="@style.css" text="Accout">
+            <Button id="accountButton" fx:id="accountButton" layoutX="1.0" layoutY="434.0" mnemonicParsing="false" onAction="#account" prefHeight="64.0" prefWidth="206.0" styleClass="home" stylesheets="@style.css" text="Account">
                <font>
                   <Font name="Arial" size="27.0" />
                </font>
