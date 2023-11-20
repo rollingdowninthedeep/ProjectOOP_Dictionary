@@ -174,3 +174,9 @@
   -fx-border-width: 1;
   -fx-border-color: #000000;
 }
+
+.start
+{
+  -fx-background-radius: 60;
+  -fx-background-color: #FFFFFF;
+}

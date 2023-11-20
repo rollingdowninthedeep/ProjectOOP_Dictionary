@@ -22,5 +22,35 @@
       <image>
         <Image url="@../images/dictionary.png" />
       </image></ImageView>
+      <Label layoutX="77.0" layoutY="146.0" prefHeight="68.0" prefWidth="108.0" text="Made by:" wrapText="true">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="77.0" layoutY="201.0" lineSpacing="10.0" prefHeight="61.0" prefWidth="333.0" text="• Lương Thế Quyền – 22021156">
+         <font>
+            <Font name="Arial" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="77.0" layoutY="262.0" prefHeight="61.0" prefWidth="333.0" text="• Nguyễn Đình Trường – 22021205">
+         <font>
+            <Font name="Arial" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="77.0" layoutY="323.0" prefHeight="61.0" prefWidth="368.0" text="• Đinh Thị Phương Thanh – 22021167">
+         <font>
+            <Font name="Arial" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="77.0" layoutY="413.0" prefHeight="47.0" prefWidth="97.0" text="Github:">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="77.0" layoutY="453.0" prefHeight="55.0" prefWidth="558.0" text="https://github.com/rollingdowninthedeep/ProjectOOP_Dictionary.git">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
   </children>
 </AnchorPane>

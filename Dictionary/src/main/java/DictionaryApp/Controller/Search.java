@@ -1,5 +1,8 @@
 package DictionaryApp.Controller;
 
+import static DictionaryApp.Controller.DictionaryController.speechEngine;
+import static DictionaryApp.Controller.DictionaryController.wordList;
+
 import DictionaryApp.Feature.Word;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -12,7 +15,7 @@ import javafx.scene.layout.AnchorPane;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Search extends Study implements Initializable {
+public class Search implements Initializable {
     @FXML
     private TextField searchTextField;
 

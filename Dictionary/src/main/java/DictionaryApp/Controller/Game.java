@@ -22,7 +22,7 @@ public class Game extends DictionaryController implements Initializable {
   @FXML
   public void game1() {
     try {
-      openScene((Stage) gamePane.getScene().getWindow(), "/Views/dictionary-view.fxml");
+      openScene((Stage) gamePane.getScene().getWindow(), "/Views/Game1.fxml");
     } catch (Exception e) {
       e.printStackTrace();
     }

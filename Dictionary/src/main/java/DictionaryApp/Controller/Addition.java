@@ -1,5 +1,7 @@
 package DictionaryApp.Controller;
 
+import static DictionaryApp.Controller.DictionaryController.wordList;
+
 import DictionaryApp.Feature.Word;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -12,7 +14,7 @@ import javafx.scene.layout.AnchorPane;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Addition extends Study implements Initializable {
+public class Addition implements Initializable {
     @FXML
     private TextField addTextField;
 

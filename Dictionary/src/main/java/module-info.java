@@ -9,8 +9,9 @@ module DictionaryApp {
     requires java.sql;
     requires java.google.speech.api;
     requires jlayer;
+  requires javafx.media;
 
-    opens DictionaryApp to javafx.fxml;
+  opens DictionaryApp to javafx.fxml;
     exports DictionaryApp;
     exports DictionaryApp.Controller;
     opens DictionaryApp.Controller to javafx.fxml;

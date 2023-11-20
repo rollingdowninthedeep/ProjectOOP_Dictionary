@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DictionaryApp.Controller.Game1">
+   <children>
+      <AnchorPane id="menuPane" fx:id="menuPane" prefHeight="600.0" prefWidth="900.0">
+         <children>
+            <ImageView fitHeight="600.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/menuGame1.gif" />
+               </image></ImageView>
+            <Button layoutX="340.0" layoutY="332.0" mnemonicParsing="false" onAction="#start" prefHeight="99.0" prefWidth="161.0" styleClass="start" stylesheets="@style.css">
+               <graphic>
+                  <ImageView fitHeight="89.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/start.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane id="gamePane" fx:id="gamePane" prefHeight="600.0" prefWidth="900.0" visible="false">
+         <children>
+            <TextArea editable="false" layoutX="90.0" layoutY="41.0" prefHeight="160.0" prefWidth="720.0" styleClass="inputText" stylesheets="@style.css" wrapText="true" />
+            <Button layoutX="90.0" layoutY="272.0" mnemonicParsing="false" prefHeight="110.0" prefWidth="330.0" styleClass="buttonSearch" stylesheets="@style.css" wrapText="true" />
+            <Button layoutX="480.0" layoutY="272.0" mnemonicParsing="false" prefHeight="110.0" prefWidth="330.0" styleClass="buttonSearch" stylesheets="@style.css" wrapText="true" />
+            <Button layoutX="90.0" layoutY="425.0" mnemonicParsing="false" prefHeight="110.0" prefWidth="330.0" styleClass="buttonSearch" stylesheets="@style.css" wrapText="true" />
+            <Button layoutX="480.0" layoutY="425.0" mnemonicParsing="false" prefHeight="110.0" prefWidth="330.0" styleClass="buttonSearch" stylesheets="@style.css" wrapText="true" />
+            <Label layoutX="752.0" layoutY="555.0" prefHeight="30.0" prefWidth="130.0" text="Time:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="209.0" fitWidth="243.0" layoutX="691.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/meo.png" />
+               </image></ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
