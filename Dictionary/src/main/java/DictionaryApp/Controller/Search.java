@@ -11,6 +11,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.web.WebView;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -25,7 +26,7 @@ public class Search implements Initializable {
     @FXML
     private TextField titleText;
     @FXML
-    private Label contentText;
+    private WebView contentText;
     @FXML
     private TextField targetText;
     @FXML
@@ -60,13 +61,12 @@ public class Search implements Initializable {
         if (word != null) {
             Word selectedWord = wordList.getWordArrayList().get(wordList.searchWord(word));
             titleText.setText(selectedWord.getOrigin());
-            String cleanMeaning = selectedWord.getMeaning().replaceAll("<.*?>", "");
-            contentText.setText(cleanMeaning);
+            contentText.getEngine().loadContent(selectedWord.getMeaning());
             resultArea.setVisible(true);
             fixingArea.setVisible(false);
         } else {
             titleText.setText(null);
-            contentText.setText(null);
+            contentText.getEngine().loadContent(null);
             resultArea.setVisible(false);
         }
     }
@@ -90,7 +90,7 @@ public class Search implements Initializable {
     public void onUpdateAction() {
         targetText.setText(titleText.getText());
         targetText.setEditable(false);
-        meaningText.setText(contentText.getText());
+        meaningText.setText(contentText.getEngine().getDocument().toString());
         resultArea.setVisible(false);
         fixingArea.setVisible(true);
     }

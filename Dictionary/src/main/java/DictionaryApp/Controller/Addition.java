@@ -13,6 +13,8 @@ import javafx.scene.layout.AnchorPane;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
 
 public class Addition implements Initializable {
     @FXML
@@ -25,7 +27,7 @@ public class Addition implements Initializable {
     private Button saveButton;
 
     @FXML
-    private Label titleLabel, contentLabel;
+    private WebView contentView;
 
     @FXML
     private TextField targetText;
@@ -117,8 +119,8 @@ public class Addition implements Initializable {
     public void showWord(String word) {
         int index = wordList.searchWord(word);
         if (index != -1) {
-            titleLabel.setText(word);
-            contentLabel.setText(wordList.getWordArrayList().get(index).getMeaning());
+            WebEngine webEngine = contentView.getEngine();
+            webEngine.loadContent(wordList.getWordArrayList().get(index).getMeaning());
             showingPane.setVisible(true);
         }
     }

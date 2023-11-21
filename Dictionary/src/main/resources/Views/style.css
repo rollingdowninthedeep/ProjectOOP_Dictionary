@@ -144,8 +144,12 @@
 
 .listView
 {
+  -fx-border-width: 1px;
+  -fx-border-radius: 5;
+  -fx-border-style: solid;
+  -fx-border-color: #000000;
   -fx-background-color: #FFFFFF;
-  -fx-border-color: #FFFFFF #000000 #FFFFFF;
+  -fx-background-radius: 5;
 }
 
 .buttonSearch

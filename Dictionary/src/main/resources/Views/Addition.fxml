@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.web.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
@@ -17,7 +18,7 @@
 
 <AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="795.0" style="-fx-background-color: #CDD0D5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DictionaryApp.Controller.Addition">
     <children>
-      <TextField id="searchTextField" fx:id="addTextField" layoutX="34.0" layoutY="39.0" onKeyPressed="#hideWord" onKeyReleased="#addFieldAction" prefHeight="33.0" prefWidth="241.0" promptText="What word you want to add?" style="-fx-background-radius: 20; -fx-border-color: #000000; -fx-border-radius: 20;" />
+      <TextField id="searchTextField" fx:id="addTextField" layoutX="30.0" layoutY="39.0" onKeyPressed="#hideWord" onKeyReleased="#addFieldAction" prefHeight="33.0" prefWidth="241.0" promptText="What word you want to add?" style="-fx-background-radius: 20; -fx-border-color: #000000; -fx-border-radius: 20;" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="40.0" />
       <AnchorPane fx:id="addingPane" layoutX="287.0" prefHeight="600.0" prefWidth="509.0" visible="false">
          <children>
             <TextArea id="contentText" fx:id="meaningText" layoutX="9.0" layoutY="112.0" prefHeight="371.0" prefWidth="455.0" styleClass="textField2" stylesheets="@style.css" wrapText="true" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="142.0" />
@@ -27,26 +28,18 @@
                   <Font size="16.0" />
                </font>
             </Button>
-            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#onCancelAction" prefHeight="37.0" prefWidth="109.0" styleClass="buttonSearch" stylesheets="@style.css" text="Cancel" AnchorPane.bottomAnchor="31.0" AnchorPane.rightAnchor="34.0">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Button>
          </children>
       </AnchorPane>
       <AnchorPane fx:id="showingPane" blendMode="SRC_ATOP" layoutX="284.0" layoutY="83.0" prefHeight="434.0" prefWidth="465.0" style="-fx-background-color: #FFFFFF;" styleClass="textField" stylesheets="@style.css" visible="false">
          <children>
-            <Label fx:id="titleLabel" layoutX="14.0" layoutY="31.0" prefHeight="39.0" prefWidth="433.0" style="-fx-background-color: #D7D7D7; -fx-background-radius: 7;" wrapText="true">
-               <font>
-                  <Font size="16.0" />
-               </font></Label>
-            <Label fx:id="contentLabel" alignment="TOP_LEFT" layoutX="16.0" layoutY="102.0" prefHeight="306.0" prefWidth="433.0" style="-fx-background-color: #D7D7D7; -fx-background-radius: 7;" wrapText="true">
-               <font>
-                  <Font size="18.0" />
-               </font></Label>
+            <WebView fx:id="contentView" layoutX="16.0" layoutY="14.0" prefHeight="415.0" prefWidth="433.0" stylesheets="@style.css" />
          </children>
       </AnchorPane>
-      <Button layoutX="34.0" layoutY="83.0" mnemonicParsing="false" prefHeight="434.0" prefWidth="241.0" styleClass="textField" stylesheets="@style.css" />
-        <ListView id="searchListView" fx:id="searchListView" fixedCellSize="30.0" layoutX="34.0" layoutY="92.0" prefHeight="416.0" prefWidth="241.0" styleClass="listView" stylesheets="@style.css" />
+        <ListView id="searchListView" fx:id="searchListView" fixedCellSize="30.0" layoutX="34.0" layoutY="83.0" prefHeight="434.0" prefWidth="241.0" styleClass="listView" stylesheets="@style.css" AnchorPane.bottomAnchor="82.0" AnchorPane.leftAnchor="30.0" />
+      <Button fx:id="cancelButton" layoutX="564.0" layoutY="438.0" mnemonicParsing="false" onAction="#onCancelAction" prefHeight="37.0" prefWidth="109.0" styleClass="buttonSearch" stylesheets="@style.css" text="Cancel" AnchorPane.bottomAnchor="31.0" AnchorPane.rightAnchor="34.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
     </children>
 </AnchorPane>
