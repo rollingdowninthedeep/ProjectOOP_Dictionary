@@ -8,6 +8,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
 
 public class Game1 implements Initializable {
+
+  public static char[] correct;
+  public static float counter;
+  public static Object wrong;
   @FXML
   private AnchorPane menuPane;
   @FXML

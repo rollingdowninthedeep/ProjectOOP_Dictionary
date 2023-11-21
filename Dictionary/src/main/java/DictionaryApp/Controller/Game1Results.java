@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressIndicator;
+import javafx.scene.control.Tooltip;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
@@ -24,8 +25,12 @@ public class Game1Results {
     @FXML
     public void initialize() {
         diem.setText(valueOf(Game1.correct) + "/" + valueOf(Game1.counter + 1));
-        dung.setProgress((float)Game1.correct/(Game1.counter + 1));
-        sai.setProgress((float)Game1.wrong/(Game1.counter + 1));
+        float dungValue = Float.parseFloat(new String(valueOf(Game1.correct))) / (Game1.counter + 1);
+        float saiValue = Float.parseFloat(new String(valueOf(Game1.wrong))) / (Game1.counter + 1);
+        dung.setProgress(dungValue);
+        sai.setProgress(saiValue);
+        dung.setTooltip(new Tooltip(String.format("%.2f%%", dungValue * 100)));
+        sai.setTooltip(new Tooltip(String.format("%.2f%%", saiValue * 100)));
     }
 
     public void back(ActionEvent actionEvent) {

@@ -15,10 +15,6 @@ import javafx.stage.StageStyle;
 
 public class Game extends DictionaryController implements Initializable {
   @FXML
-  private Button game1;
-  @FXML
-  private Button game2;
-  @FXML
   protected AnchorPane gamePane;
 
   @FXML
