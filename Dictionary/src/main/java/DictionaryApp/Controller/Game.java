@@ -7,9 +7,11 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class Game extends DictionaryController implements Initializable {
   @FXML
@@ -20,12 +22,14 @@ public class Game extends DictionaryController implements Initializable {
   protected AnchorPane gamePane;
 
   @FXML
-  public void game1() {
-    try {
-      openScene((Stage) gamePane.getScene().getWindow(), "/Views/Game1.fxml");
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
+  public void game1() throws IOException {
+    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Views/MenuGame1.fxml"));
+    Stage stage = new Stage();
+    Scene scene = new Scene(fxmlLoader.load());
+    stage.initStyle(StageStyle.UNDECORATED);
+    stage.setScene(scene);
+    stage.centerOnScreen();
+    stage.show();
   }
 
   @FXML
