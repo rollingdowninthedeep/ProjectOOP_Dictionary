@@ -22,6 +22,7 @@
             <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
          </padding>
       </Label>
+<<<<<<< Updated upstream
       <Button fx:id="A" layoutX="200.0" layoutY="334.0" mnemonicParsing="false" onAction="#a" prefHeight="55.0" prefWidth="227.0" style="-fx-background-radius: 30px; -fx-background-color: white; -fx-border-color: black; -fx-border-radius: 30px;" textAlignment="JUSTIFY" textFill="#161616">
          <font>
             <Font name="Arial" size="18.0" />
@@ -42,6 +43,28 @@
          </font>
       </Button>
       <Label layoutX="172.0" layoutY="326.0" minHeight="70.0" minWidth="64.0" prefHeight="72.0" prefWidth="64.0" style="-fx-background-color: #0066FF; -fx-background-radius: 60px;" text="A" textFill="#fcfafa">
+=======
+      <Button fx:id="A" layoutX="200.0" layoutY="334.0" mnemonicParsing="false" onAction="#a" prefHeight="55.0" prefWidth="302.0" style="-fx-background-radius: 30px; -fx-background-color: white; -fx-border-color: black; -fx-border-radius: 30px;" textAlignment="JUSTIFY" textFill="#161616">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font></Button>
+      <Button fx:id="C" layoutX="204.0" layoutY="434.0" mnemonicParsing="false" onAction="#c" prefHeight="55.0" prefWidth="302.0" style="-fx-background-radius: 30px; -fx-background-color: white; -fx-border-color: black; -fx-border-radius: 30px;" textAlignment="JUSTIFY" textFill="#040404">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="D" layoutX="559.0" layoutY="434.0" mnemonicParsing="false" onAction="#d" prefHeight="55.0" prefWidth="302.0" style="-fx-background-radius: 30px; -fx-background-color: white; -fx-border-color: black; -fx-border-radius: 30px;" textAlignment="JUSTIFY" textFill="#242323">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="B" layoutX="559.0" layoutY="334.0" mnemonicParsing="false" onAction="#b" prefHeight="55.0" prefWidth="302.0" style="-fx-background-radius: 30px; -fx-background-color: white; -fx-border-color: black; -fx-border-radius: 30px;" textAlignment="JUSTIFY" textFill="#191818">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="168.0" layoutY="326.0" minHeight="70.0" minWidth="64.0" prefHeight="72.0" prefWidth="64.0" style="-fx-background-color: #0066FF; -fx-background-radius: 60px;" text="A" textFill="#fcfafa">
+>>>>>>> Stashed changes
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
@@ -52,7 +75,11 @@
             <Font name="System Italic" size="27.0" />
          </font>
       </Label>
+<<<<<<< Updated upstream
       <Label layoutX="576.0" layoutY="426.0" minHeight="70.0" minWidth="64.0" prefHeight="72.0" prefWidth="64.0" style="-fx-background-color: #0066FF; -fx-background-radius: 60px;" text="D" textFill="#fcfafa">
+=======
+      <Label layoutX="527.0" layoutY="426.0" minHeight="70.0" minWidth="64.0" prefHeight="72.0" prefWidth="64.0" style="-fx-background-color: #0066FF; -fx-background-radius: 60px;" text="D" textFill="#fcfafa">
+>>>>>>> Stashed changes
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
@@ -63,7 +90,11 @@
             <Font name="System Italic" size="27.0" />
          </font>
       </Label>
+<<<<<<< Updated upstream
       <Label layoutX="576.0" layoutY="326.0" minHeight="70.0" minWidth="64.0" prefHeight="72.0" prefWidth="64.0" style="-fx-background-color: #0066FF; -fx-background-radius: 60px;" text="B" textFill="#fcfafa">
+=======
+      <Label layoutX="527.0" layoutY="326.0" minHeight="70.0" minWidth="64.0" prefHeight="72.0" prefWidth="64.0" style="-fx-background-color: #0066FF; -fx-background-radius: 60px;" text="B" textFill="#fcfafa">
+>>>>>>> Stashed changes
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
@@ -85,7 +116,11 @@
             <Font name="System Italic" size="27.0" />
          </font>
       </Label>
+<<<<<<< Updated upstream
       <Label layoutX="137.0" layoutY="105.0" prefHeight="49.0" prefWidth="88.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-color: black; -fx-border-radius: 10px;" text="Câu: ">
+=======
+      <Label fx:id="Cau" layoutX="137.0" layoutY="105.0" prefHeight="49.0" prefWidth="88.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-color: black; -fx-border-radius: 10px;" text="Câu: ">
+>>>>>>> Stashed changes
          <font>
             <Font size="18.0" />
          </font>
@@ -101,7 +136,11 @@
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
       </Label>
+<<<<<<< Updated upstream
       <Label layoutX="807.0" layoutY="553.0" prefHeight="42.0" prefWidth="64.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-color: black; -fx-border-radius: 10px;" text="Time" textFill="#e91818">
+=======
+      <Label fx:id="time" layoutX="807.0" layoutY="553.0" prefHeight="42.0" prefWidth="51.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-color: black; -fx-border-radius: 10px;" textFill="#e91818">
+>>>>>>> Stashed changes
          <font>
             <Font size="13.0" />
          </font>
