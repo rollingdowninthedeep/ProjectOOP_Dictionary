@@ -36,7 +36,7 @@
       </AnchorPane>
       <AnchorPane fx:id="showingPane" blendMode="SRC_ATOP" layoutX="284.0" layoutY="83.0" prefHeight="434.0" prefWidth="465.0" style="-fx-background-color: #FFFFFF;" styleClass="textField" stylesheets="@style.css" visible="false">
          <children>
-            <Label fx:id="titleLabel" layoutX="14.0" layoutY="31.0" prefHeight="39.0" prefWidth="332.0" style="-fx-background-color: #D7D7D7; -fx-background-radius: 7;" wrapText="true">
+            <Label fx:id="titleLabel" layoutX="14.0" layoutY="31.0" prefHeight="39.0" prefWidth="433.0" style="-fx-background-color: #D7D7D7; -fx-background-radius: 7;" wrapText="true">
                <font>
                   <Font size="16.0" />
                </font></Label>

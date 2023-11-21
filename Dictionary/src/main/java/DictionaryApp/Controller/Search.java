@@ -25,7 +25,7 @@ public class Search implements Initializable {
     @FXML
     private TextField titleText;
     @FXML
-    private Button contentText;
+    private Label contentText;
     @FXML
     private TextField targetText;
     @FXML
@@ -60,7 +60,8 @@ public class Search implements Initializable {
         if (word != null) {
             Word selectedWord = wordList.getWordArrayList().get(wordList.searchWord(word));
             titleText.setText(selectedWord.getOrigin());
-            contentText.setText(selectedWord.getMeaning());
+            String cleanMeaning = selectedWord.getMeaning().replaceAll("<.*?>", "");
+            contentText.setText(cleanMeaning);
             resultArea.setVisible(true);
             fixingArea.setVisible(false);
         } else {
