@@ -24,6 +24,11 @@
       <artifactId>javafx-controls</artifactId>
       <version>20.0.1</version>
     </dependency>
+      <dependency>
+          <groupId>org.openjfx</groupId>
+          <artifactId>javafx-media</artifactId>
+          <version>16</version>
+      </dependency>
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-fxml</artifactId>
@@ -39,21 +44,31 @@
       <artifactId>controlsfx</artifactId>
       <version>11.1.2</version>
     </dependency><dependency>
-    <groupId>net.synedra</groupId>
-    <artifactId>validatorfx</artifactId>
-    <version>0.4.0</version>
-    <exclusions>
-      <exclusion>
-        <groupId>org.openjfx</groupId>
-        <artifactId>*</artifactId>
-      </exclusion>
-    </exclusions>
-  </dependency><dependency>
-    <groupId>org.kordamp.bootstrapfx</groupId>
-    <artifactId>bootstrapfx-core</artifactId>
-    <version>0.4.0</version>
-  </dependency>
+      <groupId>net.synedra</groupId>
+      <artifactId>validatorfx</artifactId>
+      <version>0.4.0</version>
+      <exclusions>
+        <exclusion>
+          <groupId>org.openjfx</groupId>
+          <artifactId>*</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency><dependency>
+      <groupId>org.kordamp.bootstrapfx</groupId>
+      <artifactId>bootstrapfx-core</artifactId>
+      <version>0.4.0</version>
+    </dependency>
     <dependency>
+      <groupId>org.kordamp.ikonli</groupId>
+      <artifactId>ikonli-javafx</artifactId>
+      <version>12.3.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.kordamp.ikonli</groupId>
+      <artifactId>ikonli-materialdesign2-pack</artifactId>
+      <version>12.3.1</version>
+    </dependency>
+<dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-api</artifactId>
       <version>${junit.version}</version>
@@ -79,6 +94,10 @@
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-media</artifactId>
       <version>20.0.2</version>
+      <groupId>io.github.typhon0</groupId>
+      <artifactId>AnimateFX</artifactId>
+      <version>1.2.4</version>
+      <type>pom</type>
     </dependency>
   </dependencies>
   <build>

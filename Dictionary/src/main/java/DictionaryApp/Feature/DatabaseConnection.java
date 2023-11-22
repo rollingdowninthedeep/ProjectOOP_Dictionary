@@ -7,9 +7,9 @@ public class DatabaseConnection {
     public Connection databaseLink;
 
     public DatabaseConnection() {
-        String databaseName = "dtpt";
+        String databaseName = "dictionarydata";
         String databaseUsername = "root";
-        String databasePassword = "Thanh@2k4";
+        String databasePassword = "Quyen@030204";
         String url = "jdbc:mysql://127.0.0.1:3306/" + databaseName;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");

@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Suez+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Peralta&display=swap');
+
+#mainPane{
+    -fx-border-color: "black";
+    -fx-border-width: 2;
+}
+
+#title{
+    -fx-font-family: 'Suez One', serif;
+    -fx-alignment: center;
+    -fx-font-size: 60;
+}
+
+.button{
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+    -fx-font-family: 'Peralta', serif;
+    -fx-font-size: 30;
+}
+
+.button:hover {
+    -fx-border-color: transparent, black;
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+    -fx-underline: true;
+}
+
+.button:pressed {
+    -fx-text-fill: white;
+}
