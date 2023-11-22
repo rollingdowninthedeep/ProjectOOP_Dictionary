@@ -12,7 +12,9 @@
 3. App có 2 loại từ điển: Anh-Việt và Việt-Anh.
 
 ## Sơ đồ UML
-![UML diagram](
+![DictionaryUMP](./UML/DictionaryApp.png)
+![Multiple-choiceGameUMP](./UML/Multiple-choiceGame.png)
+![WordleGameUMP](./UML/Wordle.png)
 
 ## Cài đặt
 1. Clone dự án từ https://github.com/rollingdowninthedeep/ProjectOOP_Dictionary.git
