@@ -27,7 +27,7 @@ public class MenuGame1 {
         }
     }
 
-    public void exit(ActionEvent actionEvent)throws IOException {
+    public void exit(ActionEvent actionEvent) throws IOException {
         try {
             Stage stage = (Stage) paneMenu.getScene().getWindow();
             stage.hide();

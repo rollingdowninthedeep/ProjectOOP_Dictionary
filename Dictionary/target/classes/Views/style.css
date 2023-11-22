@@ -18,6 +18,8 @@
   -fx-background-color : #525D66;
   -fx-background-radius : 13 13 13 13;
   -fx-text-fill: #FFFFFF;
+  -fx-scale-x: 0.9;
+  -fx-scale-y: 0.9;
 }
 .translateBt:pressed
 {
@@ -28,7 +30,8 @@
   -fx-background-color : #525D66;
   -fx-background-radius : 13 13 13 13;
   -fx-text-fill: #B2BBC2;
-
+  -fx-scale-x: 1;
+  -fx-scale-y: 1;
 }
 
 .paneTranslate
@@ -104,6 +107,8 @@
 {
   -fx-background-color: #626A74;
   -fx-text-fill: #FFFFFF;
+  -fx-scale-x: 0.9;
+  -fx-scale-y: 0.9;
 }
 
 .exit:pressed
@@ -120,6 +125,17 @@
   -fx-border-radius: 0 0 5 5;
   -fx-background-color: #FFFFFF;
   -fx-background-radius: 0 0 5 5;
+}
+
+.imageButton
+{
+  -fx-background-color: #CDD0D5;
+}
+
+.paneButton:hover
+{
+  -fx-scale-x: 0.9;
+  -fx-scale-y: 0.9;
 }
 
 .textField
@@ -144,8 +160,12 @@
 
 .listView
 {
+  -fx-border-width: 1px;
+  -fx-border-radius: 5;
+  -fx-border-style: solid;
+  -fx-border-color: #000000;
   -fx-background-color: #FFFFFF;
-  -fx-border-color: #FFFFFF #000000 #FFFFFF;
+  -fx-background-radius: 5;
 }
 
 .buttonSearch
@@ -164,6 +184,8 @@
   -fx-border-radius: 20;
   -fx-border-width: 1;
   -fx-border-color: #000000;
+  -fx-scale-x: 0.9;
+  -fx-scale-y: 0.9;
 }
 
 .buttonSearch:pressed
@@ -173,4 +195,18 @@
   -fx-border-radius: 20;
   -fx-border-width: 1;
   -fx-border-color: #000000;
+  -fx-scale-x: 1;
+   -fx-scale-y: 1;
+}
+
+.start
+{
+  -fx-background-radius: 60;
+  -fx-background-color: #FFFFFF;
+}
+
+.start:hover
+{
+  -fx-scale-x: 0.9;
+  -fx-scale-y: 0.9;
 }

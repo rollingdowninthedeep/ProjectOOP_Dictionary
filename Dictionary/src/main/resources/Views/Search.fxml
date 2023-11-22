@@ -21,7 +21,7 @@
 <AnchorPane id="mainPane" fx:id="mainPane" prefHeight="600.0" prefWidth="795.0" style="-fx-background-color: #CDD0D5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DictionaryApp.Controller.Search">
   <children>
     <TextField id="searchTextField" fx:id="searchTextField" layoutX="30.0" layoutY="40.0" onKeyPressed="#searchFieldAction" prefHeight="33.0" prefWidth="241.0" promptText="Search anything you want..." style="-fx-background-radius: 20px; -fx-border-color: black; -fx-border-radius: 20px;" AnchorPane.topAnchor="40.0" />
-    <Button layoutX="34.0" layoutY="536.0" mnemonicParsing="false" onAction="#onAddAction" prefHeight="37.0" prefWidth="241.0" style="-fx-background-radius: 20; -fx-background-color: white; -fx-border-color: black; -fx-border-radius: 20;" text="Add the word ... ">
+    <Button layoutX="34.0" layoutY="536.0" mnemonicParsing="false" onAction="#onAddAction" prefHeight="37.0" prefWidth="241.0" styleClass="buttonSearch" stylesheets="@style.css" text="Add the word ... ">
       <font>
         <Font size="15.0" />
       </font>
@@ -48,9 +48,9 @@
                   <Font size="16.0" />
                </font>
             </Button>
-            <Button layoutX="409.0" layoutY="74.0" mnemonicParsing="false" onAction="#onSpeechAction" prefHeight="38.0" prefWidth="43.0" styleClass="textField" stylesheets="@style.css">
+            <Button layoutX="404.0" layoutY="68.0" mnemonicParsing="false" onAction="#onSpeechAction" prefHeight="52.0" prefWidth="53.0" styleClass="buttonSearch" stylesheets="@style.css">
                <graphic>
-                  <ImageView fitHeight="43.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="31.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/sound.png" />
                      </image>
