@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
@@ -8,236 +12,105 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="game1" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #66CCFF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DictionaryApp.Controller.Game1">
-<<<<<<< Updated upstream
-    <children>
-        <Button layoutY="562.0" mnemonicParsing="false" onAction="#back" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-color: black; -fx-border-radius: 10px;" text="Back" />
-        <Label fx:id="question" layoutX="137.0" layoutY="161.0" prefHeight="114.0" prefWidth="725.0" style="-fx-background-color: white; -fx-background-radius: 30px; -fx-border-radius: 30px; -fx-border-color: black;" textAlignment="JUSTIFY" textFill="#121111" wrapText="true">
-            <font>
-                <Font name="Arial" size="18.0" />
-            </font>
-            <opaqueInsets>
-                <Insets left="10.0" />
-            </opaqueInsets>
-            <padding>
-                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
-            </padding>
-        </Label>
-        <Button fx:id="A" layoutX="200.0" layoutY="334.0" mnemonicParsing="false" onAction="#a" prefHeight="55.0" prefWidth="302.0" style="-fx-background-radius: 30px; -fx-background-color: white; -fx-border-color: black; -fx-border-radius: 30px;" textAlignment="JUSTIFY" textFill="#161616">
-            <font>
-                <Font name="Arial" size="14.0" />
-            </font></Button>
-        <Button fx:id="C" layoutX="204.0" layoutY="434.0" mnemonicParsing="false" onAction="#c" prefHeight="55.0" prefWidth="302.0" style="-fx-background-radius: 30px; -fx-background-color: white; -fx-border-color: black; -fx-border-radius: 30px;" textAlignment="JUSTIFY" textFill="#040404">
-            <font>
-                <Font name="Arial" size="14.0" />
-            </font>
-        </Button>
-        <Button fx:id="D" layoutX="559.0" layoutY="434.0" mnemonicParsing="false" onAction="#d" prefHeight="55.0" prefWidth="302.0" style="-fx-background-radius: 30px; -fx-background-color: white; -fx-border-color: black; -fx-border-radius: 30px;" textAlignment="JUSTIFY" textFill="#242323">
-            <font>
-                <Font name="Arial" size="14.0" />
-            </font>
-        </Button>
-        <Button fx:id="B" layoutX="559.0" layoutY="334.0" mnemonicParsing="false" onAction="#b" prefHeight="55.0" prefWidth="302.0" style="-fx-background-radius: 30px; -fx-background-color: white; -fx-border-color: black; -fx-border-radius: 30px;" textAlignment="JUSTIFY" textFill="#191818">
-            <font>
-                <Font name="Arial" size="14.0" />
-            </font>
-        </Button>
-        <Label layoutX="168.0" layoutY="326.0" minHeight="70.0" minWidth="64.0" prefHeight="72.0" prefWidth="64.0" style="-fx-background-color: #0066FF; -fx-background-radius: 60px;" text="A" textFill="#fcfafa">
-            <opaqueInsets>
-                <Insets />
-            </opaqueInsets>
-            <padding>
-                <Insets bottom="24.0" left="24.0" right="18.0" top="18.0" />
-            </padding>
-            <font>
-                <Font name="System Italic" size="27.0" />
-            </font>
-        </Label>
-        <Label layoutX="527.0" layoutY="426.0" minHeight="70.0" minWidth="64.0" prefHeight="72.0" prefWidth="64.0" style="-fx-background-color: #0066FF; -fx-background-radius: 60px;" text="D" textFill="#fcfafa">
-            <opaqueInsets>
-                <Insets />
-            </opaqueInsets>
-            <padding>
-                <Insets bottom="24.0" left="24.0" right="18.0" top="18.0" />
-            </padding>
-            <font>
-                <Font name="System Italic" size="27.0" />
-            </font>
-        </Label>
-        <Label layoutX="527.0" layoutY="326.0" minHeight="70.0" minWidth="64.0" prefHeight="72.0" prefWidth="64.0" style="-fx-background-color: #0066FF; -fx-background-radius: 60px;" text="B" textFill="#fcfafa">
-            <opaqueInsets>
-                <Insets />
-            </opaqueInsets>
-            <padding>
-                <Insets bottom="24.0" left="24.0" right="18.0" top="18.0" />
-            </padding>
-            <font>
-                <Font name="System Italic" size="27.0" />
-            </font>
-        </Label>
-        <Label layoutX="172.0" layoutY="426.0" minHeight="70.0" minWidth="64.0" prefHeight="72.0" prefWidth="64.0" style="-fx-background-color: #0066FF; -fx-background-radius: 60px;" text="C" textFill="#fcfafa">
-            <opaqueInsets>
-                <Insets />
-            </opaqueInsets>
-            <padding>
-                <Insets bottom="24.0" left="24.0" right="18.0" top="18.0" />
-            </padding>
-            <font>
-                <Font name="System Italic" size="27.0" />
-            </font>
-        </Label>
-        <Label fx:id="Cau" layoutX="137.0" layoutY="105.0" prefHeight="49.0" prefWidth="88.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-color: black; -fx-border-radius: 10px;" text="Câu: ">
-            <font>
-                <Font size="18.0" />
-            </font>
-            <padding>
-                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-            </padding>
-        </Label>
-        <Label layoutX="679.0" layoutY="553.0" prefHeight="42.0" prefWidth="119.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-color: black; -fx-border-radius: 10px;" text="Thời gian còn lại">
-            <font>
-                <Font size="13.0" />
-            </font>
-            <padding>
-                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-            </padding>
-        </Label>
-        <Label fx:id="time" layoutX="807.0" layoutY="553.0" prefHeight="42.0" prefWidth="51.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-color: black; -fx-border-radius: 10px;" textFill="#e91818">
-            <font>
-                <Font size="13.0" />
-            </font>
-            <padding>
-                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-            </padding>
-        </Label>
-        <ImageView fitHeight="55.0" fitWidth="79.0" layoutX="230.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@../images/hi.png" />
-            </image>
-        </ImageView>
-        <Label prefHeight="55.0" prefWidth="1000.0" style="-fx-background-color: #0066FF; -fx-border-color: white;" text="Must have experience in English" textFill="#fbf4f4">
-            <font>
-                <Font name="Arial Italic" size="39.0" />
-            </font>
-            <padding>
-                <Insets left="250.0" />
-            </padding>
-        </Label>
-    </children>
-=======
+<AnchorPane fx:id="game1" prefHeight="668.0" prefWidth="1001.5" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DictionaryApp.Controller.Game1">
    <children>
-      <Button layoutY="562.0" mnemonicParsing="false" onAction="#back" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-color: black; -fx-border-radius: 10px;" text="Back" />
-      <Label fx:id="question" layoutX="137.0" layoutY="161.0" prefHeight="114.0" prefWidth="725.0" style="-fx-background-color: white; -fx-background-radius: 30px; -fx-border-radius: 30px; -fx-border-color: black;" textAlignment="JUSTIFY" textFill="#121111" wrapText="true">
+      <Label fx:id="Cau" alignment="CENTER" layoutX="66.0" layoutY="31.0" prefHeight="40.0" prefWidth="76.0" styleClass="listView" stylesheets="@style.css" wrapText="true">
          <font>
-            <Font name="Arial" size="18.0" />
-         </font>
-         <opaqueInsets>
-            <Insets left="10.0" />
-         </opaqueInsets>
-         <padding>
-            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
-         </padding>
-      </Label>
-      <Button fx:id="A" layoutX="200.0" layoutY="334.0" mnemonicParsing="false" onAction="#a" prefHeight="55.0" prefWidth="302.0" style="-fx-background-radius: 30px; -fx-background-color: white; -fx-border-color: black; -fx-border-radius: 30px;" textAlignment="JUSTIFY" textFill="#161616">
-         <font>
-            <Font name="Arial" size="14.0" />
-         </font></Button>
-      <Button fx:id="C" layoutX="204.0" layoutY="434.0" mnemonicParsing="false" onAction="#c" prefHeight="55.0" prefWidth="302.0" style="-fx-background-radius: 30px; -fx-background-color: white; -fx-border-color: black; -fx-border-radius: 30px;" textAlignment="JUSTIFY" textFill="#040404">
-         <font>
-            <Font name="Arial" size="14.0" />
-         </font>
-      </Button>
-      <Button fx:id="D" layoutX="559.0" layoutY="434.0" mnemonicParsing="false" onAction="#d" prefHeight="55.0" prefWidth="302.0" style="-fx-background-radius: 30px; -fx-background-color: white; -fx-border-color: black; -fx-border-radius: 30px;" textAlignment="JUSTIFY" textFill="#242323">
-         <font>
-            <Font name="Arial" size="14.0" />
-         </font>
-      </Button>
-      <Button fx:id="B" layoutX="559.0" layoutY="334.0" mnemonicParsing="false" onAction="#b" prefHeight="55.0" prefWidth="302.0" style="-fx-background-radius: 30px; -fx-background-color: white; -fx-border-color: black; -fx-border-radius: 30px;" textAlignment="JUSTIFY" textFill="#191818">
-         <font>
-            <Font name="Arial" size="14.0" />
-         </font>
-      </Button>
-      <Label layoutX="168.0" layoutY="326.0" minHeight="70.0" minWidth="64.0" prefHeight="72.0" prefWidth="64.0" style="-fx-background-color: #0066FF; -fx-background-radius: 60px;" text="A" textFill="#fcfafa">
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
-         <padding>
-            <Insets bottom="24.0" left="24.0" right="18.0" top="18.0" />
-         </padding>
-         <font>
-            <Font name="System Italic" size="27.0" />
+            <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="527.0" layoutY="426.0" minHeight="70.0" minWidth="64.0" prefHeight="72.0" prefWidth="64.0" style="-fx-background-color: #0066FF; -fx-background-radius: 60px;" text="D" textFill="#fcfafa">
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
-         <padding>
-            <Insets bottom="24.0" left="24.0" right="18.0" top="18.0" />
-         </padding>
-         <font>
-            <Font name="System Italic" size="27.0" />
-         </font>
-      </Label>
-      <Label layoutX="527.0" layoutY="326.0" minHeight="70.0" minWidth="64.0" prefHeight="72.0" prefWidth="64.0" style="-fx-background-color: #0066FF; -fx-background-radius: 60px;" text="B" textFill="#fcfafa">
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
-         <padding>
-            <Insets bottom="24.0" left="24.0" right="18.0" top="18.0" />
-         </padding>
-         <font>
-            <Font name="System Italic" size="27.0" />
-         </font>
-      </Label>
-      <Label layoutX="172.0" layoutY="426.0" minHeight="70.0" minWidth="64.0" prefHeight="72.0" prefWidth="64.0" style="-fx-background-color: #0066FF; -fx-background-radius: 60px;" text="C" textFill="#fcfafa">
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
-         <padding>
-            <Insets bottom="24.0" left="24.0" right="18.0" top="18.0" />
-         </padding>
-         <font>
-            <Font name="System Italic" size="27.0" />
-         </font>
-      </Label>
-      <Label fx:id="Cau" layoutX="137.0" layoutY="105.0" prefHeight="49.0" prefWidth="88.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-color: black; -fx-border-radius: 10px;" text="Câu: ">
-         <font>
-            <Font size="18.0" />
-         </font>
-         <padding>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-         </padding>
-      </Label>
-      <Label layoutX="679.0" layoutY="553.0" prefHeight="42.0" prefWidth="119.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-color: black; -fx-border-radius: 10px;" text="Thời gian còn lại">
-         <font>
-            <Font size="13.0" />
-         </font>
-         <padding>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-         </padding>
-      </Label>
-      <Label fx:id="time" layoutX="807.0" layoutY="553.0" prefHeight="42.0" prefWidth="51.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-color: black; -fx-border-radius: 10px;" textFill="#e91818">
-         <font>
-            <Font size="13.0" />
-         </font>
-         <padding>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-         </padding>
-      </Label>
-      <ImageView fitHeight="55.0" fitWidth="79.0" layoutX="230.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="154.0" fitWidth="114.0" layoutX="9.0" layoutY="464.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../images/hi.png" />
+            <Image url="@../images/rock.jpg" />
          </image>
       </ImageView>
-      <Label prefHeight="55.0" prefWidth="1000.0" style="-fx-background-color: #0066FF; -fx-border-color: white;" text="Must have experience in English" textFill="#fbf4f4">
+      <ImageView fitHeight="140.0" fitWidth="186.0" layoutX="406.0" layoutY="383.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/star.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="question" layoutX="105.0" layoutY="81.0" prefHeight="164.0" prefWidth="790.0" styleClass="textField" stylesheets="@style.css" wrapText="true">
          <font>
-            <Font name="Arial Italic" size="39.0" />
+            <Font size="30.0" />
          </font>
-         <padding>
-            <Insets left="250.0" />
-         </padding>
       </Label>
+      <ImageView fitHeight="85.0" fitWidth="75.0" layoutX="230.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/ufoo.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="A" alignment="TOP_LEFT" layoutX="124.0" layoutY="325.0" mnemonicParsing="false" onAction="#a" prefHeight="106.0" prefWidth="344.0" styleClass="answer" stylesheets="@style.css" wrapText="true">
+         <font>
+            <Font size="26.0" />
+         </font>
+         <graphic>
+            <Label prefHeight="84.0" prefWidth="43.0" text="A.">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Label>
+         </graphic>
+      </Button>
+      <Button fx:id="C" alignment="TOP_LEFT" layoutX="124.0" layoutY="464.0" mnemonicParsing="false" onAction="#c" prefHeight="106.0" prefWidth="344.0" styleClass="answer" stylesheets="@style.css" wrapText="true">
+         <font>
+            <Font size="26.0" />
+         </font>
+         <graphic>
+            <Label prefHeight="101.0" prefWidth="45.0" text="C.">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Label>
+         </graphic>
+      </Button>
+      <Button fx:id="B" alignment="TOP_LEFT" layoutX="528.0" layoutY="325.0" mnemonicParsing="false" onAction="#b" prefHeight="106.0" prefWidth="344.0" styleClass="answer" stylesheets="@style.css" wrapText="true">
+         <font>
+            <Font size="26.0" />
+         </font>
+         <graphic>
+            <Label prefHeight="84.0" prefWidth="43.0" text="B.">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Label>
+         </graphic>
+      </Button>
+      <Button fx:id="D" alignment="TOP_LEFT" layoutX="528.0" layoutY="464.0" mnemonicParsing="false" onAction="#d" prefHeight="106.0" prefWidth="344.0" styleClass="answer" stylesheets="@style.css" wrapText="true">
+         <font>
+            <Font size="26.0" />
+         </font>
+         <graphic>
+            <Label prefHeight="91.0" prefWidth="43.0" text="D.">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Label>
+         </graphic>
+      </Button>
+      <Button layoutX="7.0" layoutY="621.0" mnemonicParsing="false" onAction="#back" prefHeight="40.0" prefWidth="76.0" styleClass="buttonSearch" stylesheets="@style.css" text="Back">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Label layoutX="794.0" layoutY="621.0" text="Time:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="time" layoutX="872.0" layoutY="617.0" prefHeight="35.0" prefWidth="87.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="189.0" fitWidth="165.0" layoutX="823.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/meo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="176.0" fitWidth="94.0" layoutX="895.0" layoutY="410.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/astronaut.jpg" />
+         </image>
+      </ImageView>
    </children>
->>>>>>> Stashed changes
 </AnchorPane>

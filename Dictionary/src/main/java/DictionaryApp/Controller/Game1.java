@@ -1,168 +1,3 @@
-<<<<<<< Updated upstream
-package DictionaryApp.Controller;
-
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.layout.AnchorPane;
-
-import java.io.IOException;
-import java.util.Objects;
-
-public class Game1 {
-
-    @FXML
-    private AnchorPane game1;
-    public Label question;
-    public Button A, B, C, D;
-    int counter = 0;
-    static int correct = 0;
-    static int wrong = 0;
-
-    @FXML
-    public void initialize() {
-        loadQuestion();
-    }
-    @FXML
-    private void loadQuestion() {
-        if (counter == 0) {
-            question.setText("1 + 1 = ???");
-            A.setText("1");
-            B.setText("2");
-            C.setText("0");
-            D.setText("3");
-        }
-        else {
-            question.setText("Con gà có trước hay quả trứng có trước");
-            A.setText("Con mèo");
-            B.setText("Quả trứng");
-            C.setText("Con gà");
-            D.setText("Không biết");
-        }
-    }
-    @FXML
-    public void a(ActionEvent actionEvent) throws IOException {
-        checkAnswer(A.getText().toString());
-        if (checkAnswer(A.getText().toString())) {
-            correct ++;
-        } else {
-            wrong++;
-        }
-
-        if (counter == 1) {
-            try {
-                AnchorPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/Views/Game1Results.fxml")));
-                game1.getChildren().clear();
-                game1.getChildren().add(content);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        } else {
-            counter++;
-            loadQuestion();
-        }
-    }
-
-    @FXML
-    public void b(ActionEvent actionEvent) throws IOException {
-        checkAnswer(B.getText().toString());
-        if (checkAnswer(B.getText().toString())) {
-            correct ++;
-        }
-        else {
-            wrong++;
-        }
-
-        if (counter == 1) {
-            try {
-                AnchorPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/Views/Game1Results.fxml")));
-                game1.getChildren().clear();
-                game1.getChildren().add(content);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        } else {
-            counter++;
-            loadQuestion();
-        }
-    }
-
-    @FXML
-    public void c(ActionEvent actionEvent) throws IOException {
-        checkAnswer(C.getText().toString());
-        if (checkAnswer(C.getText().toString())) {
-            correct ++;
-        }
-        else {
-            wrong++;
-        }
-
-        if (counter == 1) {
-            try {
-                AnchorPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/Views/Game1Results.fxml")));
-                game1.getChildren().clear();
-                game1.getChildren().add(content);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        } else {
-            counter++;
-            loadQuestion();
-        }
-    }
-
-    @FXML
-    public void d(ActionEvent actionEvent) throws IOException {
-        checkAnswer(D.getText().toString());
-        if (checkAnswer(D.getText().toString())) {
-            correct ++;
-        }
-        else {
-            wrong++;
-        }
-
-        if (counter == 1) {
-            try {
-                AnchorPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/Views/Game1Results.fxml")));
-                game1.getChildren().clear();
-                game1.getChildren().add(content);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        } else {
-            counter++;
-            loadQuestion();
-        }
-    }
-
-    boolean checkAnswer(String answer) {
-        if (counter == 0) {
-            if (answer.equals("2")) return true;
-            else return false;
-        }
-        if (counter == 1) {
-            if (answer.equals("Không biết")) return true;
-            else return false;
-        }
-        return false;
-    }
-
-
-    @FXML
-    public void back(ActionEvent actionEvent) throws IOException {
-        try {
-            AnchorPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/Views/MenuGame1.fxml")));
-            game1.getChildren().clear();
-            game1.getChildren().add(content);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-}
-
-=======
 package DictionaryApp.Controller;
 
 import javafx.event.ActionEvent;
@@ -198,28 +33,30 @@ public class Game1 {
     @FXML
     public void initialize() {
         loadQuestion();
+        startTimer();
     }
+
     // Câu hỏi
-    String Question[] = {" _______ raiding for camels was a significant part of Bedouin life has been documented in Wilfed Thesiger’s Arabian Sands.","The little boy pleaded _____ not to leave him alone in the dark.","_____, the people who come to this club are in their twenties and thirties.",
-    "The TV station, in _______ to massive popular demand, decided notto discontinue the soap opera","His emotional problems _______ from the attitudes he encountered as a child, I think.","Pete was born and brought up in Cornwall and he knows the place like the _________.",
-    "British and Australian people share the same language, but in other respects they are as different as _____.","Rows and silences are ______ and parcel of any marriage."," Ancient Egyptians mummified their dead through the use of chemicals, _______ ancient Peruvians did through natural processes.",
-    "Don’t _____ to any conclusion before you know the full facts.","A few animals sometimes fool their enemies _______ to be dead.","On no account ____ in the office be used for personal materials.","The ____ of the bank where he worked was not in the center of the city.",
-    "______ from Bill, all the students said they would go.","Position of the main stress","________ my opinion, French cheese is better than English cheese.","When I bought the shoes, they ___________ me well but later they were too tight at home","The purpose of phonetics is ____ an inventory and a description of the sounds found in speech",
-    "They received a ten-year sentence for ___armed robbery.","__________ the hijacker plane landed, it was surrounded by police.","This magazine is very good. If you like reading, you should______to it.","In life ___can make a mistake ; We’re all human.","Do you have any objections______this new road scheme?",
-    "The police set a_________to catch the thieves.","Although he was _________ , he agreed to play tennis with me"," _______ I didn’t know how to do the job. But now I am making progress.","Language could _______ more quickly if there were more language exchange programs.","She won the award for ________ her whole life to looking after the poor.","Although the exam was difficult, ______ the students passed it.",
-    "The mirror was ______ broken.","But for his help, I _________","I may look half asleep, but I can assure you I am ______ awake.","Lefthand traffic, a custom existing in Britain only, _________ back to the days when English people went to and fro on horseback."," “ I am sorry . I broke the vase.” – “_________________.”","The tourists refused to __________ the poor service.",
-    "I haven’t got the time to do my own work, _________ help you with yours.","Professor Lockwood recommended that Michael _________ in chemistry.","Luggage may be placed here ________ the owner’s risk.","It’s a serious operation for a woman as old as my grandmother. She is very frail . I hope she ________",
-    "________ any other politician would have given way to this sort of pressure years ago.","After several months of hard work, the police are finally ________ somewhere with their investigation.","There’s no danger in using this machine as long as you _________ to the safety regulations."};
+    String Question[] = {" _____ raiding for camels was a significant part of Bedouin life has been documented in Wilfed Thesiger’s Arabian Sands.","The little boy pleaded ___ not to leave him alone in the dark.","___, the people who come to this club are in their twenties and thirties.",
+        "The TV station, in _____ to massive popular demand, decided notto discontinue the soap opera","His emotional problems _____ from the attitudes he encountered as a child, I think.","Pete was born and brought up in Cornwall and he knows the place like the _______.",
+        "British and Australian people share the same language, but in other respects they are as different as ___.","Rows and silences are ____ and parcel of any marriage."," Ancient Egyptians mummified their dead through the use of chemicals, _____ ancient Peruvians did through natural processes.",
+        "Don’t ___ to any conclusion before you know the full facts.","A few animals sometimes fool their enemies _____ to be dead.","On no account __ in the office be used for personal materials.","The __ of the bank where he worked was not in the center of the city.",
+        "____ from Bill, all the students said they would go.","Position of the main stress","______ my opinion, French cheese is better than English cheese.","When I bought the shoes, they _________ me well but later they were too tight at home","The purpose of phonetics is __ an inventory and a description of the sounds found in speech",
+        "They received a ten-year sentence for __armed robbery.","_________ the hijacker plane landed, it was surrounded by police.","This magazine is very good. If you like reading, you should______to it.","In life ___can make a mistake ; We’re all human.","Do you have any objections______this new road scheme?",
+        "The police set a_________to catch the thieves.","Although he was _______ , he agreed to play tennis with me"," _____ I didn’t know how to do the job. But now I am making progress.","Language could _____ more quickly if there were more language exchange programs.","She won the award for ______ her whole life to looking after the poor.","Although the exam was difficult, ____ the students passed it.",
+        "The mirror was ____ broken.","But for his help, I _______","I may look half asleep, but I can assure you I am ____ awake.","Lefthand traffic, a custom existing in Britain only, _______ back to the days when English people went to and fro on horseback."," “ I am sorry . I broke the vase.” – “_________________.”","The tourists refused to ________ the poor service.",
+        "I haven’t got the time to do my own work, _______ help you with yours.","Professor Lockwood recommended that Michael _______ in chemistry.","Luggage may be placed here ______ the owner’s risk.","It’s a serious operation for a woman as old as my grandmother. She is very frail . I hope she ______",
+        "______ any other politician would have given way to this sort of pressure years ago.","After several months of hard work, the police are finally ______ somewhere with their investigation.","There’s no danger in using this machine as long as you _______ to the safety regulations."};
     // Câu trả lời
     String options[][] = {
-            {"That", "Which", "What", "Where"}, {"on his mother","his mother","with his mother","at his mother"}, {"By and large","Altogether","To a degree","Virtually"}, {"reaction","response","answer","rely"}, {"stem","flourish","root","sprout"}, {"nose on his face","back of his hand","hairs on his head","teeth of his mouth"},
-            {"cats and dogs","salt and pepper: muối tiêu (màu tóc)","chalk and cheese: khác nhau hoàn toàn","here and there: đó đây"},{"package","stamps","packet","part"},{"because","whereas","even though","whether or not"},{"rush","dive","leap","fly"},{"have been appearing","to be appearing","to appear","by appearing"},{"the photocopy machines","the photocopy machines should","should the photocopy machines","does the photocopy machines"},
-            {"branch","seat","house","piece"},{"Exept","Only","Apart","Separate"},{"vacancy","calculate","delicious","furniture"},{"For","To","By","In"},{"matched","fitted","suited","went with"},{"provide","provided","to provide","being provided"},{"making","doing","committing","practicing"},
-            {"As soon as","While","Just","Until"},{"buy","subscribe","contribute","enroll"},{"anyone","someone","some people","not anybody"},{"at","with","to","for"},{"plan","device","snare","trap"},{"exhaustion","exhausted","exhausting","exhaustive"},{"First","First of all","At first","At the first."},
-            {"be learning","have learned","have learning","be learned"},{"paying","devoting","causing","attracting"},{"most of","none of","a few","a lot"},{"accident","accidental","accidentally","by accident"},{"would not have succeeded","had not succeeded","did not succeed","would succeed"},{"broad","full","well","wide"},{"dated","dating","dates back","to date"},
-            {"Don’t worry. Things break.","OK. Go ahead.","Yes, certainly.","I’d rather not."},{"stand in for ","put up with ","get away from","get on with "},{"leaving aside : ngoại trừ","let alone : huống hồ","apart from : ngoại trừ","not counting : ngoại trừ"},
-            {"not to major","not major","wouldn’t major","isn’t majoring"},{"at","by","under","with"},{"gets away : rời đi","comes round : tỉnh lại (become conscious)","pulls through : hồi phục (sức khỏe)","stands up"},{"Really","Practically : thực tế mà nói, gần như","Actually : thực tế là (luôn đứng ở trong câu)","Utterly : hoàn toàn, cực kỳ"},
-            {"getting","going","making","doing"},{"comply","adhere","observe","abide"}
+        {"That", "Which", "What", "Where"}, {"on his mother","his mother","with his mother","at his mother"}, {"By and large","Altogether","To a degree","Virtually"}, {"reaction","response","answer","rely"}, {"stem","flourish","root","sprout"}, {"nose on his face","back of his hand","hairs on his head","teeth of his mouth"},
+        {"cats and dogs","salt and pepper: muối tiêu (màu tóc)","chalk and cheese: khác nhau hoàn toàn","here and there: đó đây"},{"package","stamps","packet","part"},{"because","whereas","even though","whether or not"},{"rush","dive","leap","fly"},{"have been appearing","to be appearing","to appear","by appearing"},{"the photocopy machines","the photocopy machines should","should the photocopy machines","does the photocopy machines"},
+        {"branch","seat","house","piece"},{"Exept","Only","Apart","Separate"},{"vacancy","calculate","delicious","furniture"},{"For","To","By","In"},{"matched","fitted","suited","went with"},{"provide","provided","to provide","being provided"},{"making","doing","committing","practicing"},
+        {"As soon as","While","Just","Until"},{"buy","subscribe","contribute","enroll"},{"anyone","someone","some people","not anybody"},{"at","with","to","for"},{"plan","device","snare","trap"},{"exhaustion","exhausted","exhausting","exhaustive"},{"First","First of all","At first","At the first."},
+        {"be learning","have learned","have learning","be learned"},{"paying","devoting","causing","attracting"},{"most of","none of","a few","a lot"},{"accident","accidental","accidentally","by accident"},{"would not have succeeded","had not succeeded","did not succeed","would succeed"},{"broad","full","well","wide"},{"dated","dating","dates back","to date"},
+        {"Don’t worry. Things break.","OK. Go ahead.","Yes, certainly.","I’d rather not."},{"stand in for ","put up with ","get away from","get on with "},{"leaving aside : ngoại trừ","let alone : huống hồ","apart from : ngoại trừ","not counting : ngoại trừ"},
+        {"not to major","not major","wouldn’t major","isn’t majoring"},{"at","by","under","with"},{"gets away : rời đi","comes round : tỉnh lại (become conscious)","pulls through : hồi phục (sức khỏe)","stands up"},{"Really","Practically : thực tế mà nói, gần như","Actually : thực tế là (luôn đứng ở trong câu)","Utterly : hoàn toàn, cực kỳ"},
+        {"getting","going","making","doing"},{"comply","adhere","observe","abide"}
     };
     // Random câu hỏi
     Random random = new Random();
@@ -227,39 +64,38 @@ public class Game1 {
     // Đếm ngược thời gian
     public int giay = 60;
     public int phut = 9;
-    @FXML
-    private void loadQuestion() {
+
+    private void startTimer() {
         Timeline timeline = new Timeline();
         timeline.setCycleCount(Timeline.INDEFINITE);
         timeline.getKeyFrames().add(
-                new KeyFrame(Duration.seconds(1), new EventHandler<ActionEvent>() {
-                    @Override
-                    public void handle(ActionEvent event) {
-                        giay--;
-                        time.setText(String.valueOf(phut) + ":" + String.valueOf(giay));
-
-                        if (phut == 0 && giay == 0){
-                            time.setText("Hết giờ");
-                            try {
-                                AnchorPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/Views/Game1Results.fxml")));
-                                game1.getChildren().clear();
-                                game1.getChildren().add(content);
-                            } catch (IOException e) {
-                                e.printStackTrace();
-                            }
-                            counter = 0;
-                        }
-
-                        if (giay <= 0) {
-                            phut--;
-                            giay = 60;
-                        }
-                    }
-                })
+            new KeyFrame(Duration.seconds(1), new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    updateTimer();
+                }
+            })
         );
-
         timeline.play();
-
+    }
+    private void updateTimer() {
+        giay--;
+        time.setText(String.valueOf(phut) + ":" + String.valueOf(giay));
+        if (phut == 0 && giay == 0){
+            time.setText("Hết giờ");
+            try {
+                AnchorPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/Views/Game1Results.fxml")));
+                game1.getChildren().clear();
+                game1.getChildren().add(content);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            counter = 0;
+        }
+        if (giay <= 0) {phut--;giay = 60;}
+    }
+    @FXML
+    private void loadQuestion() {
         Cau.setText("Câu " + (counter+1));
         question.setText(Question[n]);
         A.setText(options[n][0]);
@@ -268,7 +104,6 @@ public class Game1 {
         D.setText(options[n][3]);
     }
     @FXML
-
     public void a(ActionEvent actionEvent) throws IOException {
         checkAnswer(A.getText().toString());
         if (checkAnswer(A.getText().toString())) {
@@ -552,5 +387,3 @@ public class Game1 {
         }
     }
 }
-
->>>>>>> Stashed changes
