@@ -34,6 +34,7 @@ public class Game extends DictionaryController implements Initializable {
 
   @FXML
   public void game2() throws IOException {
+    System.out.println(2);
     FXMLLoader fxmlLoader = new FXMLLoader(DictionaryApplication.class.getResource("/Views/wordle-view.fxml"));
     Parent root = fxmlLoader.load();
     Wordle.start(root);

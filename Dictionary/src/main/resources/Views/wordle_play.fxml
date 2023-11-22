@@ -31,7 +31,7 @@
                         </Button>
                         <Button fx:id="menuButton" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToMenu" prefHeight="32.0" prefWidth="40.0" textFill="#3875d0" GridPane.columnIndex="2" GridPane.rowIndex="0">
                         </Button>
-                        <Label text="W O R D I S H" GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
+                        <Label text="W O R D L E" GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
                             <font>
                                 <Font name="Arial Bold" size="36.0" />
                             </font>
