@@ -11,9 +11,9 @@ import java.util.Comparator;
 import java.util.List;
 
 public class WordList {
-    private static final String DEFAULT_TABLE = "tbl_edict";
-    private static final String DEFAULT_ORIGINCOLUMN = "word";
-    private static final String DEFAULT_MEANINGCOLUMN = "detail";
+    private static final String DEFAULT_TABLE = "av";
+    private static final String DEFAULT_ORIGINCOLUMN = "world";
+    private static final String DEFAULT_MEANINGCOLUMN = "html";
     private final DatabaseConnection databaseConnection = new DatabaseConnection();
     private ArrayList<Word> wordArrayList = new ArrayList<>();
     private Trie trie = new Trie();
