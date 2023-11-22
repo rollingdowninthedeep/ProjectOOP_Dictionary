@@ -34,7 +34,10 @@
 - Có thể đổi từ Anh-Việt sang Việt-Anh.
 
 ## Demo
-![Demo](
+
+https://github.com/rollingdowninthedeep/ProjectOOP_Dictionary/assets/145013411/82cd9674-e028-40dd-b058-cfb1ee41826e
+
+
 
 ## Những cải tiến trong tương lai
 1. Thêm nhiều ngôn ngữ.
