@@ -1,5 +1,12 @@
 package DictionaryApp.Controller;
 
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.PopupWindow;
+
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,7 +25,7 @@ public class MenuGame1 {
     private AnchorPane paneMenu;
     @FXML
     public void start(ActionEvent actionEvent) throws IOException {
-        try {
+      try {
             AnchorPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/Views/Game1.fxml")));
             paneMenu.getChildren().clear();
             paneMenu.getChildren().add(content);
@@ -27,7 +34,7 @@ public class MenuGame1 {
         }
     }
 
-    public void exit(ActionEvent actionEvent) throws IOException {
+    public void exit(ActionEvent actionEvent)throws IOException {
         try {
             Stage stage = (Stage) paneMenu.getScene().getWindow();
             stage.hide();
