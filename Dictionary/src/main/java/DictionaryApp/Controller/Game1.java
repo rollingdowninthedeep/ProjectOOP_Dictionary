@@ -378,6 +378,7 @@ public class Game1 {
 
     @FXML
     public void back(ActionEvent actionEvent) throws IOException {
+        counter = 0;
         try {
             AnchorPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/Views/MenuGame1.fxml")));
             game1.getChildren().clear();
