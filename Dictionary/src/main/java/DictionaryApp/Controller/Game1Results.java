@@ -25,7 +25,7 @@ public class Game1Results {
     public void initialize() {
         diem.setText(valueOf(Game1.correct) + "/" + valueOf(Game1.counter + 1));
         dung.setProgress((float)Game1.correct/(Game1.counter + 1));
-        sai.setProgress((float)Game1.wrong/(Game1.counter + 1));
+        sai.setProgress((float)(20 - Game1.correct)/(Game1.counter + 1));
     }
 
     public void back(ActionEvent actionEvent) {
