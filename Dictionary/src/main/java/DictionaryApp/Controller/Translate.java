@@ -14,7 +14,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 
-public class Translate implements Initializable {
+public class Translate extends Display {
 
     @FXML
     private TextArea inputText;
@@ -86,7 +86,7 @@ public class Translate implements Initializable {
         }
     }
 
-    @FXML
+    @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         outputText.setEditable(false);
 

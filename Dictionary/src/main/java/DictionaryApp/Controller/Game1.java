@@ -1,43 +1,38 @@
 package DictionaryApp.Controller;
 
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.layout.AnchorPane;
-import java.io.RandomAccessFile;
-import java.util.Random;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.util.Duration;
-import java.io.IOException;
-import java.util.LinkedList;
-import java.util.Objects;
+
+import java.net.URL;
+import java.util.Random;
+import java.util.ResourceBundle;
 
 
-
-public class Game1 {
-
-
+public class Game1 extends Display {
     @FXML
-    private AnchorPane game1;
-    public Label question;
-    public Label Cau;
-    public Label time;
-    public Button A, B, C, D;
+    private Label question;
+    @FXML
+    private Label Cau;
+    @FXML
+    private Label time;
+    @FXML
+    private Button A, B, C, D;
     static int counter = 0;
     static int correct = 0;
     static int wrong = 0;
-    @FXML
-    public void initialize() {
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
         loadQuestion();
         startTimer();
     }
 
     // Câu hỏi
-    String Question[] = {" _____ raiding for camels was a significant part of Bedouin life has been documented in Wilfed Thesiger’s Arabian Sands.","The little boy pleaded ___ not to leave him alone in the dark.","___, the people who come to this club are in their twenties and thirties.",
+    String[] Question = {" _____ raiding for camels was a significant part of Bedouin life has been documented in Wilfed Thesiger’s Arabian Sands.","The little boy pleaded ___ not to leave him alone in the dark.","___, the people who come to this club are in their twenties and thirties.",
         "The TV station, in _____ to massive popular demand, decided notto discontinue the soap opera","His emotional problems _____ from the attitudes he encountered as a child, I think.","Pete was born and brought up in Cornwall and he knows the place like the _______.",
         "British and Australian people share the same language, but in other respects they are as different as ___.","Rows and silences are ____ and parcel of any marriage."," Ancient Egyptians mummified their dead through the use of chemicals, _____ ancient Peruvians did through natural processes.",
         "Don’t ___ to any conclusion before you know the full facts.","A few animals sometimes fool their enemies _____ to be dead.","On no account __ in the office be used for personal materials.","The __ of the bank where he worked was not in the center of the city.",
@@ -48,7 +43,7 @@ public class Game1 {
         "I haven’t got the time to do my own work, _______ help you with yours.","Professor Lockwood recommended that Michael _______ in chemistry.","Luggage may be placed here ______ the owner’s risk.","It’s a serious operation for a woman as old as my grandmother. She is very frail . I hope she ______",
         "______ any other politician would have given way to this sort of pressure years ago.","After several months of hard work, the police are finally ______ somewhere with their investigation.","There’s no danger in using this machine as long as you _______ to the safety regulations."};
     // Câu trả lời
-    String options[][] = {
+    String[][] options = {
         {"That", "Which", "What", "Where"}, {"on his mother","his mother","with his mother","at his mother"}, {"By and large","Altogether","To a degree","Virtually"}, {"reaction","response","answer","rely"}, {"stem","flourish","root","sprout"}, {"nose on his face","back of his hand","hairs on his head","teeth of his mouth"},
         {"cats and dogs","salt and pepper: muối tiêu (màu tóc)","chalk and cheese: khác nhau hoàn toàn","here and there: đó đây"},{"package","stamps","packet","part"},{"because","whereas","even though","whether or not"},{"rush","dive","leap","fly"},{"have been appearing","to be appearing","to appear","by appearing"},{"the photocopy machines","the photocopy machines should","should the photocopy machines","does the photocopy machines"},
         {"branch","seat","house","piece"},{"Exept","Only","Apart","Separate"},{"vacancy","calculate","delicious","furniture"},{"For","To","By","In"},{"matched","fitted","suited","went with"},{"provide","provided","to provide","being provided"},{"making","doing","committing","practicing"},
@@ -69,25 +64,18 @@ public class Game1 {
         Timeline timeline = new Timeline();
         timeline.setCycleCount(Timeline.INDEFINITE);
         timeline.getKeyFrames().add(
-            new KeyFrame(Duration.seconds(1), new EventHandler<ActionEvent>() {
-                @Override
-                public void handle(ActionEvent event) {
-                    updateTimer();
-                }
-            })
+            new KeyFrame(Duration.seconds(1), event -> updateTimer())
         );
         timeline.play();
     }
     private void updateTimer() {
         giay--;
-        time.setText(String.valueOf(phut) + ":" + String.valueOf(giay));
+        time.setText(phut + ":" + giay);
         if (phut == 0 && giay == 0){
             time.setText("Hết giờ");
             try {
-                AnchorPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/Views/Game1Results.fxml")));
-                game1.getChildren().clear();
-                game1.getChildren().add(content);
-            } catch (IOException e) {
+                switchScene("/Views/Game1Results.fxml");
+            } catch (Exception e) {
                 e.printStackTrace();
             }
             counter = 0;
@@ -104,9 +92,9 @@ public class Game1 {
         D.setText(options[n][3]);
     }
     @FXML
-    public void a(ActionEvent actionEvent) throws IOException {
-        checkAnswer(A.getText().toString());
-        if (checkAnswer(A.getText().toString())) {
+    public void a() {
+        checkAnswer(A.getText());
+        if (checkAnswer(A.getText())) {
             correct ++;
         } else {
             wrong++;
@@ -114,10 +102,8 @@ public class Game1 {
 
         if (counter == 19) {
             try {
-                AnchorPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/Views/Game1Results.fxml")));
-                game1.getChildren().clear();
-                game1.getChildren().add(content);
-            } catch (IOException e) {
+                switchScene("/Views/Game1Results.fxml");
+            } catch (Exception e) {
                 e.printStackTrace();
             }
             counter = 0;
@@ -129,9 +115,9 @@ public class Game1 {
     }
 
     @FXML
-    public void b(ActionEvent actionEvent) throws IOException {
-        checkAnswer(B.getText().toString());
-        if (checkAnswer(B.getText().toString())) {
+    public void b() {
+        checkAnswer(B.getText());
+        if (checkAnswer(B.getText())) {
             correct ++;
         }
         else {
@@ -140,10 +126,8 @@ public class Game1 {
 
         if (counter == 19) {
             try {
-                AnchorPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/Views/Game1Results.fxml")));
-                game1.getChildren().clear();
-                game1.getChildren().add(content);
-            } catch (IOException e) {
+                switchScene("/Views/Game1Results.fxml");
+            } catch (Exception e) {
                 e.printStackTrace();
             }
             counter = 0;
@@ -155,9 +139,9 @@ public class Game1 {
     }
 
     @FXML
-    public void c(ActionEvent actionEvent) throws IOException {
-        checkAnswer(C.getText().toString());
-        if (checkAnswer(C.getText().toString())) {
+    public void c(){
+        checkAnswer(C.getText());
+        if (checkAnswer(C.getText())) {
             correct ++;
         }
         else {
@@ -166,10 +150,8 @@ public class Game1 {
 
         if (counter == 19) {
             try {
-                AnchorPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/Views/Game1Results.fxml")));
-                game1.getChildren().clear();
-                game1.getChildren().add(content);
-            } catch (IOException e) {
+                switchScene("/Views/Game1Results.fxml");
+            } catch (Exception e) {
                 e.printStackTrace();
             }
             counter = 0;
@@ -181,9 +163,9 @@ public class Game1 {
     }
 
     @FXML
-    public void d(ActionEvent actionEvent) throws IOException {
-        checkAnswer(D.getText().toString());
-        if (checkAnswer(D.getText().toString())) {
+    public void d() {
+        checkAnswer(D.getText());
+        if (checkAnswer(D.getText())) {
             correct ++;
         }
         else {
@@ -192,10 +174,8 @@ public class Game1 {
 
         if (counter == 19) {
             try {
-                AnchorPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/Views/Game1Results.fxml")));
-                game1.getChildren().clear();
-                game1.getChildren().add(content);
-            } catch (IOException e) {
+                switchScene("/Views/Game1Results.fxml");
+            } catch (Exception e) {
                 e.printStackTrace();
             }
             counter = 0;
@@ -209,180 +189,137 @@ public class Game1 {
     // Check đáp án
     boolean checkAnswer(String answer) {
         if (n == 0) {
-            if (answer.equals("That")) return true;
-            else return false;
+            return answer.equals("That");
         }
         if (n == 1) {
-            if (answer.equals("with his mother")) return true;
-            else return false;
+            return answer.equals("with his mother");
         }
         if (n == 3) {
-            if (answer.equals("By and large")) return true;
-            else return false;
+            return answer.equals("By and large");
         }
         if (n == 4) {
-            if (answer.equals("response")) return true;
-            else return false;
+            return answer.equals("response");
         }
         if (n == 5) {
-            if (answer.equals("stem")) return true;
-            else return false;
+            return answer.equals("stem");
         }
         if (n == 6) {
-            if (answer.equals("back of his hand")) return true;
-            else return false;
+            return answer.equals("back of his hand");
         }
         if (n == 7) {
-            if (answer.equals("chalk and cheese: khác nhau hoàn toàn")) return true;
-            else return false;
+            return answer.equals("chalk and cheese: khác nhau hoàn toàn");
         }
         if (n == 8) {
-            if (answer.equals("whereas")) return true;
-            else return false;
+            return answer.equals("whereas");
         }
         if (n == 9) {
-            if (answer.equals("leap")) return true;
-            else return false;
+            return answer.equals("leap");
         }
         if (n == 10) {
-            if (answer.equals("by appearing")) return true;
-            else return false;
+            return answer.equals("by appearing");
         }
         if (n == 11) {
-            if (answer.equals("should the photocopy machines")) return true;
-            else return false;
+            return answer.equals("should the photocopy machines");
         }
         if (n == 12) {
-            if (answer.equals("branch")) return true;
-            else return false;
+            return answer.equals("branch");
         }
         if (n == 13) {
-            if (answer.equals("Apart")) return true;
-            else return false;
+            return answer.equals("Apart");
         }
         if (n == 14) {
-            if (answer.equals("delicious")) return true;
-            else return false;
+            return answer.equals("delicious");
         }
         if (n == 15) {
-            if (answer.equals("In")) return true;
-            else return false;
+            return answer.equals("In");
         }
         if (n == 16) {
-            if (answer.equals("fitted")) return true;
-            else return false;
+            return answer.equals("fitted");
         }
         if (n == 17) {
-            if (answer.equals("to provide")) return true;
-            else return false;
+            return answer.equals("to provide");
         }
         if (n == 18) {
-            if (answer.equals("committing")) return true;
-            else return false;
+            return answer.equals("committing");
         }
         if (n == 19) {
-            if (answer.equals("As soon as")) return true;
-            else return false;
+            return answer.equals("As soon as");
         }
         if (n == 20) {
-            if (answer.equals("subscribe")) return true;
-            else return false;
+            return answer.equals("subscribe");
         }
         if (n == 21) {
-            if (answer.equals("anyone")) return true;
-            else return false;
+            return answer.equals("anyone");
         }
         if (n == 22) {
-            if (answer.equals("to")) return true;
-            else return false;
+            return answer.equals("to");
         }
         if (n == 23) {
-            if (answer.equals("trap")) return true;
-            else return false;
+            return answer.equals("trap");
         }
         if (n == 24) {
-            if (answer.equals("exhausted")) return true;
-            else return false;
+            return answer.equals("exhausted");
         }
         if (n == 25) {
-            if (answer.equals("At first")) return true;
-            else return false;
+            return answer.equals("At first");
         }
         if (n == 26) {
-            if (answer.equals("be learned")) return true;
-            else return false;
+            return answer.equals("be learned");
         }
         if (n == 27) {
-            if (answer.equals("devoting")) return true;
-            else return false;
+            return answer.equals("devoting");
         }
         if (n == 28) {
-            if (answer.equals("most of")) return true;
-            else return false;
+            return answer.equals("most of");
         }
         if (n == 29) {
-            if (answer.equals("accidentally")) return true;
-            else return false;
+            return answer.equals("accidentally");
         }
         if (n == 30) {
-            if (answer.equals("would not have succeeded")) return true;
-            else return false;
+            return answer.equals("would not have succeeded");
         }
         if (n == 31) {
-            if (answer.equals("wide")) return true;
-            else return false;
+            return answer.equals("wide");
         }
         if (n == 32) {
-            if (answer.equals("dates back")) return true;
-            else return false;
+            return answer.equals("dates back");
         }
         if (n == 33) {
-            if (answer.equals("Don’t worry. Things break.")) return true;
-            else return false;
+            return answer.equals("Don’t worry. Things break.");
         }
         if (n == 34) {
-            if (answer.equals("put up with")) return true;
-            else return false;
+            return answer.equals("put up with");
         }
         if (n == 35) {
-            if (answer.equals("let alone : huống hồ")) return true;
-            else return false;
+            return answer.equals("let alone : huống hồ");
         }
         if (n == 36) {
-            if (answer.equals("not major")) return true;
-            else return false;
+            return answer.equals("not major");
         }
         if (n == 37) {
-            if (answer.equals("at")) return true;
-            else return false;
+            return answer.equals("at");
         }
         if (n == 38) {
-            if (answer.equals("pulls through : hồi phục (sức khỏe)")) return true;
-            else return false;
+            return answer.equals("pulls through : hồi phục (sức khỏe)");
         }
         if (n == 39) {
-            if (answer.equals("Practically : thực tế mà nói, gần như")) return true;
-            else return false;
+            return answer.equals("Practically : thực tế mà nói, gần như");
         }
         if (n == 40) {
-            if (answer.equals("getting")) return true;
-            else return false;
+            return answer.equals("getting");
         }
         if (n == 41) {
-            if (answer.equals("adhere")) return true;
-            else return false;
+            return answer.equals("adhere");
         }
         return false;
     }
 
 
     @FXML
-    public void back(ActionEvent actionEvent) throws IOException {
+    public void back() {
         try {
-            AnchorPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/Views/MenuGame1.fxml")));
-            game1.getChildren().clear();
-            game1.getChildren().add(content);
-        } catch (IOException e) {
+            switchScene("/Views/MenuGame1.fxml");
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

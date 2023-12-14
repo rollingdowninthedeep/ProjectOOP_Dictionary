@@ -1,5 +1,9 @@
 package DictionaryApp.Wordle.Controller;
 
+import DictionaryApp.Controller.Display;
+import DictionaryApp.Wordle.Feature.GameStatus;
+import DictionaryApp.Wordle.Feature.WordStats;
+import DictionaryApp.Wordle.Wordle;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.beans.value.ChangeListener;
@@ -15,19 +19,16 @@ import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.chart.XYChart.Data;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
-import javafx.stage.Stage;
 import javafx.util.Duration;
-import DictionaryApp.Wordle.Feature.GameStatus;
-import DictionaryApp.Wordle.Feature.WordStats;
 
-import java.io.IOException;
+import java.net.URL;
 import java.util.List;
+import java.util.ResourceBundle;
 import java.util.stream.IntStream;
 
-public class StatsController {
+public class StatsController extends Display {
 
     @FXML
     private Label statPlayed;
@@ -37,8 +38,6 @@ public class StatsController {
     private Label statCurrent;
     @FXML
     private Label statMax;
-    @FXML
-    private Button switchButton;
 
     @FXML
     private StackPane pane;
@@ -56,12 +55,13 @@ public class StatsController {
     private ChangeListener<Scene> changeListener;
 
     @FXML
-    private void switchToWordle() throws IOException {
+    private void switchToWordle() throws Exception {
         pane.sceneProperty().removeListener(changeListener);
-        WordleMenu.setScene((Stage) switchButton.getScene().getWindow(), "/Views/wordle-view");
+        switchScene("/Views/wordle-view.fxml");
     }
 
-    public void initialize() {
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
         barChart.setAnimated(false);
         barChart.setTitle("Guess Distribution");
         barChart.setLegendVisible(false);

@@ -1,5 +1,13 @@
 package DictionaryApp.Wordle.Controller;
 
+import DictionaryApp.Controller.Display;
+import DictionaryApp.DictionaryApplication;
+import DictionaryApp.Wordle.Feature.*;
+import DictionaryApp.Wordle.Item.KeyButton;
+import DictionaryApp.Wordle.Item.LetterLabel;
+import DictionaryApp.Wordle.Item.LetterStyle;
+import DictionaryApp.Wordle.Item.LetterStyle.DisplayType;
+import DictionaryApp.Wordle.Item.WordPopup;
 import javafx.animation.*;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.IntegerProperty;
@@ -17,27 +25,20 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.TilePane;
 import javafx.scene.transform.Rotate;
-import javafx.stage.Stage;
 import javafx.util.Duration;
-import DictionaryApp.Wordle.Feature.*;
-import DictionaryApp.Wordle.Item.KeyButton;
-import DictionaryApp.Wordle.Item.LetterLabel;
-import DictionaryApp.Wordle.Item.LetterStyle;
-import DictionaryApp.Wordle.Item.LetterStyle.DisplayType;
-import DictionaryApp.Wordle.Item.WordPopup;
-import DictionaryApp.DictionaryApplication;
 
-import java.io.IOException;
+import java.net.URL;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.ResourceBundle;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 import static DictionaryApp.Wordle.Item.LetterStyle.DisplayType.*;
 
-public class WordleController {
+public class WordleController extends Display {
 
     @FXML
     private Button resetButton;
@@ -75,7 +76,8 @@ public class WordleController {
     WordTally wordTally = new WordTally();
     private int rowSize;
 
-    public void initialize() {
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
         ImageView resetImage = new ImageView(new Image(DictionaryApplication.class.getResource("/images/reload.png").toString()));
         resetImage.setFitWidth(23);
         resetImage.setFitHeight(23);
@@ -155,7 +157,7 @@ public class WordleController {
     }
 
     @FXML
-    private void resetGame(ActionEvent event) {
+    private void resetGame() {
         gameReset.set(false);
         doResetGame();
     }
@@ -196,8 +198,8 @@ public class WordleController {
     }
 
     @FXML
-    private void switchToMenu() throws IOException {
-        WordleMenu.setScene((Stage) menuButton.getScene().getWindow(), "/Views/wordle-view");
+    private void switchToMenu() throws Exception {
+        switchScene("/Views/wordle-view.fxml");
     }
 
     @FXML
@@ -219,7 +221,7 @@ public class WordleController {
     }
 
     @FXML
-    private void processEnter(ActionEvent event) {
+    private void processEnter() {
         doProcessEnter();
     }
 
@@ -376,7 +378,7 @@ public class WordleController {
     }
 
     @FXML
-    private void processDelete(ActionEvent event) {
+    private void processDelete() {
         doProcessDelete();
     }
 
@@ -411,8 +413,8 @@ public class WordleController {
     }
 
     @FXML
-    private void displayInfo() throws IOException {
-        WordleMenu.setScene((Stage) infoButton.getScene().getWindow(), "/Views/wordle_howto");
+    private void displayInfo() throws Exception {
+        switchScene("/Views/wordle_howto.fxml");
     }
 
 }

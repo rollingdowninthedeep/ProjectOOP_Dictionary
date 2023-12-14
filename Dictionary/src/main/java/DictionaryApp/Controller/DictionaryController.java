@@ -2,20 +2,16 @@ package DictionaryApp.Controller;
 
 import DictionaryApp.Feature.SpeechEngine;
 import DictionaryApp.Feature.WordList;
-import java.io.IOException;
-import java.net.URL;
-import java.util.Objects;
-import java.util.ResourceBundle;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
-import javafx.fxml.*;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
+import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
 
-public class DictionaryController implements Initializable {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class DictionaryController extends Display {
     @FXML
     private Button homeButton;
     @FXML
@@ -32,76 +28,58 @@ public class DictionaryController implements Initializable {
     private AnchorPane pane;
     protected static WordList wordList = new WordList();
     protected static final SpeechEngine speechEngine = new SpeechEngine();
-    public void openScene(Stage window, String path) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource(path));
-        Scene scene =  new Scene(root);
-        window.setScene(scene);
-        window.centerOnScreen();
-        window.show();
-    }
     @FXML
-    public void search(ActionEvent actionEvent) {
+    public void search() {
         try {
-            AnchorPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/Views/Search.fxml")));
-            pane.getChildren().clear();
-            pane.getChildren().add(content);
+            switchScene(pane, "/Views/Search.fxml");
             searchButton.getStyleClass().add("pressed");
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     @FXML
-    public void translate(ActionEvent actionEvent) {
+    public void translate() {
         try {
-            AnchorPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/Views/Translate.fxml")));
-            pane.getChildren().clear();
-            pane.getChildren().add(content);
+            switchScene(pane, "/Views/Translate.fxml");
             translateButton.getStyleClass().add("pressed");
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     @FXML
-    public void home(ActionEvent actionEvent) {
+    public void home() {
         try {
-            AnchorPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/Views/Home.fxml")));
-            pane.getChildren().clear();
-            pane.getChildren().add(content);
+            switchScene(pane, "/Views/Home.fxml");
             homeButton.getStyleClass().add("pressed");
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     @FXML
-    public void game(ActionEvent actionEvent) {
+    public void game() {
         try {
-            AnchorPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/Views/Game.fxml")));
-            pane.getChildren().clear();
-            pane.getChildren().add(content);
+            switchScene(pane, "/Views/Game.fxml");
             gameButton.getStyleClass().add("pressed");
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     @FXML
-    public void account(ActionEvent actionEvent) {
+    public void account() {
         try {
-            AnchorPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(
-                "/Views/Account.fxml")));
-            pane.getChildren().clear();
-            pane.getChildren().add(content);
+            switchScene(pane, "/Views/Account.fxml");
             translateButton.getStyleClass().add("pressed");
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     @FXML
-    public void exit(ActionEvent actionEvent) {
+    public void exit() {
         try {
             Platform.exit();
         } catch (Exception e) {
@@ -112,10 +90,9 @@ public class DictionaryController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
-            AnchorPane content = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/Views/Home.fxml")));
-            pane.getChildren().add(content);
+            switchScene(pane, "/Views/Home.fxml");
             homeButton.getStyleClass().add("pressed");
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

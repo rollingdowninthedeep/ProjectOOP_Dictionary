@@ -1,42 +1,41 @@
 package DictionaryApp.Wordle.Controller;
 
-import animatefx.animation.*;
-import javafx.application.Platform;
+import DictionaryApp.Controller.Display;
+import DictionaryApp.DictionaryApplication;
+import animatefx.animation.AnimationFX;
+import animatefx.animation.Tada;
+import animatefx.animation.Wobble;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
-import javafx.stage.Stage;
-import DictionaryApp.DictionaryApplication;
-import DictionaryApp.Wordle.Wordle;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class WordleMenu implements Initializable{
+public class WordleMenu extends Display {
     @FXML
-    private ImageView volumeButton, muteButton, exitButton;
+    private ImageView volumeButton;
+    @FXML
+    private ImageView muteButton;
     @FXML
     private Label title;
     @FXML
     private Button playButton, infoButton, statsButton;
 
     @FXML
-    public void playButtonAction() throws IOException{
-        setScene((Stage) playButton.getScene().getWindow(), "/Views/wordle_play");
+    public void playButtonAction() throws Exception{
+        switchScene("/Views/wordle_play.fxml");
     }
     @FXML
-    public void infoButtonAction() throws IOException{
-        setScene((Stage) infoButton.getScene().getWindow(), "/Views/wordle_howto");
+    public void infoButtonAction() throws Exception{
+        switchScene("/Views/wordle_howto.fxml");
     }
     @FXML
-    public void statsButtonAction() throws IOException{
-        setScene((Stage) statsButton.getScene().getWindow(), "/Views/wordle_stats");
+    public void statsButtonAction() throws Exception{
+        switchScene("/Views/wordle_stats.fxml");
     }
     @FXML
     public void soundButtonAction(){
@@ -45,21 +44,24 @@ public class WordleMenu implements Initializable{
             muteButton.setVisible(true);
             volumeButton.setVisible(false);
 
-            Wordle.mediaPlayer.pause();
+            mediaPlayer.pause();
         } else {
             isMute = false;
             muteButton.setVisible(false);
             volumeButton.setVisible(true);
 
-            Wordle.mediaPlayer.play();
+            mediaPlayer.play();
         }
     }
     @FXML
     public void exitButtonAction(){
-        Wordle.close((Stage) exitButton.getScene().getWindow());
+        mediaPlayer.stop();
+        exitScene();
     }
 
     private boolean isMute = false;
+    public static MediaPlayer mediaPlayer = new MediaPlayer(new Media(DictionaryApplication.class.getResource("/sounds/Fluffing-a-Duck(chosic.com).mp3").toExternalForm()));
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         AnimationFX playAnimation = new Tada(playButton).setResetOnFinished(true).setCycleCount(999);
@@ -84,12 +86,8 @@ public class WordleMenu implements Initializable{
         infoButton.setOnMouseExited(
                 e -> infoAnimation.setResetOnFinished(true).stop()
         );
-    }
-    public static void setScene(Stage stage, String path) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(DictionaryApplication.class.getResource(path + ".fxml"));
-        Parent root = fxmlLoader.load();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.centerOnScreen();
+
+        mediaPlayer.setCycleCount(999);
+        mediaPlayer.setAutoPlay(true);
     }
 }

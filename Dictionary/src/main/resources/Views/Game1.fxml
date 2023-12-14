@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
@@ -12,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="game1" prefHeight="668.0" prefWidth="1001.5" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DictionaryApp.Controller.Game1">
+<AnchorPane fx:id="mainPane" prefHeight="668.0" prefWidth="1001.5" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DictionaryApp.Controller.Game1">
    <children>
       <Label fx:id="Cau" alignment="CENTER" layoutX="66.0" layoutY="31.0" prefHeight="40.0" prefWidth="76.0" styleClass="listView" stylesheets="@style.css" wrapText="true">
          <font>

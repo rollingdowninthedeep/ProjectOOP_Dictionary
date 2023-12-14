@@ -16,13 +16,7 @@ import javafx.scene.web.WebView;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Search implements Initializable {
-    @FXML
-    private TextField searchTextField;
-
-    @FXML
-    private ListView<String> searchListView = new ListView<>();
-
+public class Search extends SearchDisplay{
     @FXML
     private TextField titleText;
     @FXML
@@ -33,13 +27,11 @@ public class Search implements Initializable {
     private TextArea meaningText;
 
     @FXML
-    private AnchorPane mainPane;
-    @FXML
     private AnchorPane resultArea;
     @FXML
     private AnchorPane fixingArea;
 
-    @FXML
+    @Override
     public void searchFieldAction() {
         fixingArea.setVisible(false);
         resultArea.setVisible(false);
@@ -78,9 +70,7 @@ public class Search implements Initializable {
     @FXML
     public void onAddAction() {
         try {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("/Views/Addition.fxml"));
-            mainPane.getChildren().clear();
-            mainPane.getChildren().add(pane);
+            switchScene("/Views/Addition.fxml");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -114,25 +104,9 @@ public class Search implements Initializable {
         resultArea.setVisible(false);
     }
 
-    private ObservableList<String> list = FXCollections.observableArrayList();
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setList("");
         searchListView.setItems(list);
-    }
-
-
-    public void setList(String keyWord) {
-        if (keyWord.isBlank()) {
-            ObservableList<String> list = FXCollections.observableArrayList();
-            for (Word word : wordList.getWordArrayList()) {
-                list.add(word.getOrigin());
-                if (list.size() == 30) break;
-            }
-            this.list = list;
-        } else {
-            this.list = wordList.lookUpWord(keyWord);
-        }
     }
 }

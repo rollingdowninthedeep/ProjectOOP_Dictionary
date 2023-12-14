@@ -1,22 +1,20 @@
 package DictionaryApp.Controller;
 
-import static DictionaryApp.Controller.DictionaryController.wordList;
-
 import DictionaryApp.Feature.Word;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
-
-import java.net.URL;
-import java.util.ResourceBundle;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 
-public class Addition implements Initializable {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import static DictionaryApp.Controller.DictionaryController.wordList;
+
+public class Addition extends Display {
     @FXML
     private TextField addTextField;
 
@@ -36,7 +34,7 @@ public class Addition implements Initializable {
     private TextArea meaningText;
 
     @FXML
-    private AnchorPane mainPane, addingPane, showingPane;
+    private AnchorPane addingPane, showingPane;
 
     @FXML
     public void addFieldAction() {
@@ -74,9 +72,7 @@ public class Addition implements Initializable {
         wordList.insertWord(word);
 
         try {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("/Views/Search.fxml"));
-            mainPane.getChildren().clear();
-            mainPane.getChildren().add(pane);
+            switchScene("/Views/Search.fxml");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -85,9 +81,7 @@ public class Addition implements Initializable {
     @FXML
     public void onCancelAction() {
         try {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("/Views/Search.fxml"));
-            mainPane.getChildren().clear();
-            mainPane.getChildren().add(pane);
+            switchScene("/Views/Search.fxml");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -99,7 +93,7 @@ public class Addition implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         searchListView.setCellFactory(lv -> {
-            ListCell<String> cell = new ListCell<String>() {
+            ListCell<String> cell = new ListCell<>() {
                 @Override
                 public void updateItem(String item, boolean empty) {
                     super.updateItem(item, empty);

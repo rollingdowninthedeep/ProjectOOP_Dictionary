@@ -17,7 +17,7 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://D:/jlayer-1.0.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../jlayer-1.0.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -26,11 +26,13 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://D:/java-google-speech-api-8.0.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../java-google-speech-api-8.0.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" exported="" name="added_libraries" level="project" />
+    <orderEntry type="library" exported="" name="io.github.typhon0.AnimateFX" level="project" />
   </component>
 </module>

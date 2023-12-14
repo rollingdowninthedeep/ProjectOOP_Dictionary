@@ -1,5 +1,5 @@
 package DictionaryApp.Controller;
 
-public class Account {
+public class Account extends Display {
 
 }

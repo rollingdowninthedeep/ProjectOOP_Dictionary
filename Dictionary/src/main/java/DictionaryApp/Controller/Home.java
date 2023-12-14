@@ -1,5 +1,4 @@
 package DictionaryApp.Controller;
 
-public class Home {
-
+public class Home extends Display {
 }
